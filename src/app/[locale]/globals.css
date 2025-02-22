@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.theme-switch {
+  position: relative;
+
+  background-image: url("/images/switch.png");
+  background-size: cover;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 9999px;
+  transition: background-image 0.3s ease;
+}
+.theme-switch span {
+  background: none;
+}
+
+.theme-switch input:checked {
+  background-image: url("/images/switch.png");
+}
+
+@layer components {
+  .px_padding {
+    @apply l:px-[80px] md:px-[60px] sm:px-[40px] xs:px-[20px];
+  }
+}
