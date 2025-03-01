@@ -5,7 +5,7 @@
   position: relative;
 
   background-image: url("/images/switch.png");
-  background-size: cover;
+  background-size: contain;
 
   background-repeat: no-repeat;
   background-position: center;
@@ -22,6 +22,35 @@
 
 @layer components {
   .px_padding {
-    @apply l:px-[80px] md:px-[60px] sm:px-[40px] xs:px-[20px];
+    @apply xl:px-[80px] lg:px-[50px] md:px-[60px] sm:px-[40px] xs:px-[20px];
+  }
+  /* undeline for the links in the navbar */
+  .links {
+    @apply relative inline-block;
+  }
+
+  .links::after {
+    content: "";
+    @apply absolute left-0 w-full h-[2px] bg-secondary;
+    bottom: -8px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .links:hover::after {
+    transform: scaleX(1);
+  }
+  .links_active {
+    @apply relative inline-block;
+  }
+
+  .links_active::after {
+    content: "";
+    @apply absolute left-0 w-full h-[2px] bg-secondary;
+    bottom: -8px;
+    transform: scaleX(1); /* Active state should always show the underline */
+    transform-origin: left;
+    transition: transform 0.2s ease-in-out;
   }
 }

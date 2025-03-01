@@ -5,11 +5,5 @@ import { ThemeSwitcher } from "@/components/NavBar/ThemeSwitcher";
 
 export default async function HomePage() {
   const t = await getTranslations();
-  return (
-    <Box>
-      <h1>{t("title")}</h1>
-      <LanguageSelect />
-      <ThemeSwitcher />
-    </Box>
-  );
+  return <Box></Box>;
 }

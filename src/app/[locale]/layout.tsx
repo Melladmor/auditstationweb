@@ -6,6 +6,8 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Locale, routing } from "@/i18n/routing";
+import { Box } from "@chakra-ui/react";
+import Header from "@/components/NavBar/Header";
 const poppins = Poppins({
   weight: "400",
   subsets: ["latin"],
@@ -39,7 +41,10 @@ export default async function LocaleLayout({
       suppressHydrationWarning>
       <body>
         <NextIntlClientProvider messages={messages}>
-          <Provider>{children}</Provider>
+          <Provider>
+            <Header />
+            <Box className="h-[100vh]">{children}</Box>
+          </Provider>
         </NextIntlClientProvider>
       </body>
     </html>

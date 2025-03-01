@@ -1,3 +1,14 @@
 {
-    "title":"Hello"
+  "navbarlinks": {
+    "aboutus": "About Us",
+    "services": {
+      "services": "Services",
+      "mainservices": "Main Services",
+      "packages": "Packages"
+    },
+    "platform": "Platform",
+    "training": "Training",
+    "news": "News",
+    "contactus": "Contact Us"
+  }
 }

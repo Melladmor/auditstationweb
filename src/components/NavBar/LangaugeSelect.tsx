@@ -1,8 +1,6 @@
 "use client";
-
 import { Locale, usePathname, useRouter } from "@/i18n/routing";
 import { useParams } from "next/navigation";
-
 import { HStack, createListCollection } from "@chakra-ui/react";
 import { Avatar } from "@/components/ui/avatar";
 import {
@@ -53,9 +51,14 @@ export default function LanguageSelect() {
       positioning={{ sameWidth: true }}
       onChange={(e: any) => onSelectChange(e.target.value)}
       w="85px">
-      <SelectTrigger>
+      <SelectTrigger
+        sm={{
+          "& .chakra-select__indicator": {
+            color: "white",
+          },
+        }}>
         {locale === "en" ? (
-          <HStack>
+          <HStack color="white">
             <Avatar
               shape="rounded"
               size="2xs"
@@ -65,7 +68,7 @@ export default function LanguageSelect() {
             {locale.toLocaleUpperCase()}
           </HStack>
         ) : (
-          <HStack>
+          <HStack color="white">
             <Avatar
               shape="rounded"
               size="2xs"

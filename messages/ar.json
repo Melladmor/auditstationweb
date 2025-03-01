@@ -1,3 +1,14 @@
 {
-  "title": "ملرحبا بك"
+  "navbarlinks": {
+    "aboutus": "من نحن",
+    "services": {
+      "services": "الخدمات",
+      "mainservices": "الخدمات الرئيسية",
+      "packages": "الباقات"
+    },
+    "platform": "المنصة",
+    "training": "التدريب",
+    "news": "الأخبار",
+    "contactus": "اتصل بنا"
+  }
 }

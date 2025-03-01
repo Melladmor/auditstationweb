@@ -8,18 +8,30 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    screen: {
-      xs: "300px",
-      sm: "640px",
-      md: "768px",
-      lg: "1024px",
-      xl: "1280px",
-      "2xl": "1536px",
-    },
     extend: {
+      screens: {
+        xs: "300px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
+      },
       colors: {
-        light: {},
-        dark: {},
+        mainblack: "#091219",
+        secondary: "#FF7701",
+        light: {
+          background: "#ffffff",
+          text: "#000000",
+          card: "#f8f8f8",
+        },
+
+        // Custom Dark Mode Colors
+        dark: {
+          background: "#0a0f18",
+          text: "#ffffff",
+          card: "#1a1f29",
+        },
       },
     },
   },
