@@ -1,9 +1,13 @@
 import { getTranslations } from "next-intl/server";
 import { Box } from "@chakra-ui/react";
-import LanguageSelect from "@/components/NavBar/LangaugeSelect";
-import { ThemeSwitcher } from "@/components/NavBar/ThemeSwitcher";
+
+import HeroSection from "@/components/HeroSection/HeroSection";
 
 export default async function HomePage() {
   const t = await getTranslations();
-  return <Box></Box>;
+  return (
+    <Box>
+      <HeroSection />
+    </Box>
+  );
 }

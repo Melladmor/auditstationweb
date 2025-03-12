@@ -24,6 +24,7 @@
   .px_padding {
     @apply xl:px-[80px] lg:px-[50px] md:px-[60px] sm:px-[40px] xs:px-[20px];
   }
+
   /* undeline for the links in the navbar */
   .links {
     @apply relative inline-block;
