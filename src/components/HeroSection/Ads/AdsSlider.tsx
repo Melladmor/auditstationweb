@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useRef, useState } from "react";
 import { SlideI } from "./type";
 import { Swiper, SwiperSlide, SwiperRef } from "swiper/react";
@@ -7,7 +6,6 @@ import { Swiper as SwiperType } from "swiper";
 import { Pagination } from "swiper/modules";
 import AdsSlide from "./AdsSlide";
 import SwiperPagination from "./Pagination";
-import { Box } from "@chakra-ui/react";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -25,7 +23,7 @@ const AdsSlider = ({ data }: Props) => {
   };
 
   return (
-    <Box className="relative">
+    <div className="relative">
       <Swiper
         ref={swiperRef}
         modules={[Pagination]}
@@ -43,7 +41,7 @@ const AdsSlider = ({ data }: Props) => {
         activeIndex={activeIndex}
         totalSlides={data?.length}
       />
-    </Box>
+    </div>
   );
 };
 

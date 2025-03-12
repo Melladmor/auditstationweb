@@ -1,11 +1,9 @@
 import React from "react";
 import { SlideI } from "./type";
-import { Box } from "@chakra-ui/react";
-import Image from "next/image";
 
 type Props = SlideI;
 
-function AdsSlide({ id, image, subTitle, title }: Props) {
+function AdsSlide({ image, subTitle, title }: Props) {
   return (
     <div
       className="w-full h-full absolute inset-0 bg-cover bg-center"
