@@ -1,5 +1,7 @@
 export interface StatisticsI {
   id: number | string;
-  value: number | string;
   title: string;
+  start?: number;
+  end?: number;
+  value?: number | string;
 }

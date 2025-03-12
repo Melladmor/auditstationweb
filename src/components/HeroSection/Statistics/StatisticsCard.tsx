@@ -1,5 +1,7 @@
+"use Client";
 import React from "react";
 import { StatisticsI } from "./type.d";
+import CountUp from "react-countup";
 
 type Props = {
   cardData: StatisticsI;
@@ -15,6 +17,11 @@ const StatisticsCard = ({ cardData, isLast }: Props) => {
           : ""
       }`}>
       <div className="xl:text-[40px] lg:text-[36px] md:text-[32px] sm:text-[28px] xs:text-[28px]  text-secondary font-[700]">
+        {cardData.end ? (
+          <CountUp start={cardData.start} end={cardData.end} duration={3} />
+        ) : (
+          ""
+        )}{" "}
         {cardData?.value}
       </div>
       <div className="xl:text-[24px] lg:text-[20px] md:text-[18px] sm:text-[14px] xs:text-[14px] font-[400] text-black text-center">

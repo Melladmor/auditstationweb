@@ -1,16 +1,37 @@
-import { Box } from "@chakra-ui/react";
+"use client";
 import React from "react";
 import { StatisticsI } from "./type.d";
 import StatisticsCard from "./StatisticsCard";
-
 type Props = {};
 
 function Statistics({}: Props) {
   const statisticsData: StatisticsI[] = [
-    { id: 1, value: "1", title: "In The World" },
-    { id: 2, value: "6", title: "Years Of Experience" },
-    { id: 3, value: "+200", title: "Customers" },
-    { id: 4, value: "100%", title: "Satisfaction" },
+    {
+      id: 1,
+      title: "In The World",
+      start: 0,
+      end: 1,
+    },
+    {
+      id: 2,
+      title: "Years Of Experience",
+      start: 0,
+      end: 6,
+    },
+    {
+      id: 3,
+      value: "+",
+      title: "Customers",
+      start: 0,
+      end: 200,
+    },
+    {
+      id: 4,
+      value: "%",
+      title: "Satisfaction",
+      start: 0,
+      end: 100,
+    },
     { id: 5, value: "All", title: "Over Gcc" },
   ];
 
