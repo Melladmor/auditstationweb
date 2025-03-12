@@ -1,98 +1,64 @@
 "use client";
+
 import { Locale, usePathname, useRouter } from "@/i18n/routing";
 import { useParams } from "next/navigation";
-import { HStack, createListCollection } from "@chakra-ui/react";
-import { Avatar } from "@/components/ui/avatar";
-import {
-  SelectContent,
-  SelectItem,
-  SelectRoot,
-  SelectTrigger,
-} from "@/components/ui/select";
 import { useLocale } from "next-intl";
-
-const langs = createListCollection({
-  items: [
-    {
-      name: "EN",
-      id: "en",
-      avatar: "/images/flags/en.png",
-    },
-    {
-      name: "AR",
-      id: "ar",
-      avatar: "/images/flags/ar.png",
-    },
-  ],
-  itemToString: (item) => item.name,
-  itemToValue: (item) => item.id,
-});
+import Image from "next/image";
+import { useState } from "react";
 
 export default function LanguageSelect() {
+  const langs = [
+    { name: "EN", id: "en", avatar: "/images/flags/en.png" },
+    { name: "AR", id: "ar", avatar: "/images/flags/ar.png" },
+  ];
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
   const params = useParams();
+  const [selectedLang, setSelectedLang] = useState(locale);
 
   function onSelectChange(nextLocale: string) {
-    router.replace(
-      // @ts-expect-error -- TypeScript will validate that only known `params`
-      { pathname, params },
-      { locale: nextLocale as Locale }
-    );
+    setSelectedLang(nextLocale);
+    // @ts-expect-error -- TypeScript will validate that only known `params`
+    router.replace({ pathname, params }, { locale: nextLocale as Locale });
   }
 
   return (
-    <SelectRoot
-      collection={langs}
-      size="sm"
-      width="240px"
-      defaultValue={[locale]}
-      positioning={{ sameWidth: true }}
-      onChange={(e: any) => onSelectChange(e.target.value)}
-      w="85px">
-      <SelectTrigger
-        sm={{
-          "& .chakra-select__indicator": {
-            color: "white",
-          },
-        }}>
-        {locale === "en" ? (
-          <HStack color="white">
-            <Avatar
-              shape="rounded"
-              size="2xs"
-              bg="none"
-              src="/images/flags/en.png"
+    <ul className="menu menu-horizontal px-1">
+      <li>
+        <details className="text-white">
+          <summary className="flex items-center">
+            <Image
+              src={
+                selectedLang === "en"
+                  ? "/images/flags/en.png"
+                  : "/images/flags/ar.png"
+              }
+              alt="Flag"
+              width={16}
+              height={16}
+              className="w-4 h-4 rounded-sm"
             />
-            {locale.toLocaleUpperCase()}
-          </HStack>
-        ) : (
-          <HStack color="white">
-            <Avatar
-              shape="rounded"
-              size="2xs"
-              bg="none"
-              src="/images/flags/ar.png"
-            />
-            {locale.toLocaleUpperCase()}
-          </HStack>
-        )}
-      </SelectTrigger>
-      <SelectContent portalled={false} w="100px">
-        {langs.items.map((item) => (
-          <SelectItem item={item} key={item.id} justifyContent="flex-start">
-            <Avatar
-              shape="square"
-              name={item.name}
-              src={item.avatar}
-              size="2xs"
-              bg="none"
-            />
-            {item.name}
-          </SelectItem>
-        ))}
-      </SelectContent>
-    </SelectRoot>
+            <span className="ml-2">{selectedLang.toUpperCase()}</span>
+          </summary>
+          <ul className="p-2 text-black">
+            {langs.map((item) => (
+              <li key={item.id} onClick={() => onSelectChange(item.id)}>
+                <div className="flex items-center">
+                  <Image
+                    src={item.avatar}
+                    alt={item.name}
+                    width={16}
+                    height={16}
+                    className="w-4 h-4 rounded-sm"
+                  />
+                  <span className="ml-2">{item.name}</span>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </details>
+      </li>
+    </ul>
   );
 }
