@@ -35,4 +35,7 @@ export default {
     },
   },
   plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["light", "dark"], // Enables both light and dark themes
+  },
 } satisfies Config;

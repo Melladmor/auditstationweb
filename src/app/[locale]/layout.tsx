@@ -8,6 +8,7 @@ import { notFound } from "next/navigation";
 import { Locale, routing } from "@/i18n/routing";
 import { Box } from "@chakra-ui/react";
 import Header from "@/components/NavBar/Header";
+import { ThemeProvider } from "next-themes";
 const poppins = Poppins({
   weight: "400",
   subsets: ["latin"],
@@ -42,8 +43,10 @@ export default async function LocaleLayout({
       <body>
         <NextIntlClientProvider messages={messages}>
           <Provider>
-            <Header />
-            <Box className="h-[100vh]">{children}</Box>
+            <ThemeProvider attribute="data-theme" defaultTheme="light">
+              <Header />
+              <Box className="h-[100vh]">{children}</Box>
+            </ThemeProvider>
           </Provider>
         </NextIntlClientProvider>
       </body>

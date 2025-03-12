@@ -1,5 +1,4 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
 import { usePathname } from "@/i18n/routing";
 import { useLocale } from "next-intl";
 import Link from "next/link";
@@ -14,7 +13,7 @@ const MobileNavlink = ({ id, isPage, title, url, isDropDwon }: Props) => {
   const splitedPathName = pathname.slice(`/${locale}`.length);
   const isActive = splitedPathName === `/${url}` || url === `#${url}`;
   return (
-    <Box className="w-full">
+    <div className="w-full">
       {isDropDwon ? (
         <NavDropDown title={title} items={isDropDwon} isMobile />
       ) : (
@@ -28,7 +27,7 @@ const MobileNavlink = ({ id, isPage, title, url, isDropDwon }: Props) => {
         </button>
       )}
       <div className="w-full h-[2px] bg-secondary my-1"></div>
-    </Box>
+    </div>
   );
 };
 

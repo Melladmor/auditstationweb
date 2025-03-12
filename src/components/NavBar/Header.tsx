@@ -1,4 +1,3 @@
-import { Box } from "@chakra-ui/react";
 import { getTranslations } from "next-intl/server";
 import { NavLinkI } from "./type";
 import LanguageSelect from "./LangaugeSelect";
@@ -64,18 +63,14 @@ const Header = async () => {
   ];
   return (
     <header className="px_padding xl:h-[120px] lg:h-[120px] md:h-[100px]  xl:py-[24px] lg:py-[24px] md:py-[18px] bg-mainblack  sticky top-0 z-50">
-      <Box
-        h="72px"
-        display="flex"
-        justifyContent="space-between"
-        alignItems="center">
+      <div className="h-[72px] flex justify-between items-center">
         <NavBar linksData={linksData} />
-        <Box display="flex" alignItems="center" gap="8px">
+        <div className="flex items-center gap-[8px]">
           <ThemeSwitcher />
           <LanguageSelect />
           <Profile />
-        </Box>
-      </Box>
+        </div>
+      </div>
     </header>
   );
 };

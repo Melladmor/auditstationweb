@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLinkI } from "../type";
-import { Box } from "@chakra-ui/react";
 import NavDropDown from "./NavDropDown";
 import { usePathname } from "next/navigation";
 import { Link } from "@/i18n/routing";
@@ -13,7 +12,7 @@ const NavLink = ({ id, isPage, title, url, isDropDwon }: Props) => {
   const pathname = usePathname();
   const splitedPathName = pathname.slice(`/${locale}`.length);
   return (
-    <Box>
+    <div>
       {isDropDwon ? (
         <NavDropDown title={title} items={isDropDwon} />
       ) : (
@@ -27,7 +26,7 @@ const NavLink = ({ id, isPage, title, url, isDropDwon }: Props) => {
           {title}
         </Link>
       )}
-    </Box>
+    </div>
   );
 };
 

@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { NavLinkI } from "../type";
-import { Box, Icon } from "@chakra-ui/react";
 import NavLink from "./NavLink";
 import HomeIcon from "../../../../public/icons/HomeIcon";
 import { Link, usePathname } from "@/i18n/routing";
@@ -13,35 +12,29 @@ type Props = {
 
 const NavLinks = ({ data }: Props) => {
   const pathname = usePathname();
+
   return (
-    <Box
-      h="full"
-      display="flex"
-      alignItems="center"
-      className="xl:gap-[100px] lg:gap-[20px]">
+    <div className="h-full flex items-center xl:gap-[100px] lg:gap-[20px]">
       <Logo />
-      <Box
-        display="flex"
-        alignItems="center"
-        h="full"
-        className="xl:gap-[32px] lg:gap-[15px]">
+      <div className="flex items-center h-full xl:gap-[32px] lg:gap-[15px]">
         <Link
-          className={`flex justify-center items-center min-w-[50px]  links ${
+          className={`flex justify-center items-center min-w-[50px] links ${
             pathname === "/" ? "links_active" : ""
           }`}
           href="/">
-          <Icon className="xl:size-[32px] lg:size-[25px]">
+          <div className="xl:w-[32px] xl:h-[32px] lg:w-[25px] lg:h-[25px]">
             <HomeIcon
               fillOne={pathname === "/" ? "#FF7701" : "white"}
               fillTwo={pathname === "/" ? "white" : "#FF7701"}
             />
-          </Icon>
+          </div>
         </Link>
-        {data.map((link: NavLinkI) => {
-          return <NavLink key={link.id} {...link} />;
-        })}
-      </Box>
-    </Box>
+
+        {data.map((link: NavLinkI) => (
+          <NavLink key={link.id} {...link} />
+        ))}
+      </div>
+    </div>
   );
 };
 
