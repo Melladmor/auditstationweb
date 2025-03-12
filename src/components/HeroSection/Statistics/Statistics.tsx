@@ -2,9 +2,8 @@
 import React from "react";
 import { StatisticsI } from "./type.d";
 import StatisticsCard from "./StatisticsCard";
-type Props = {};
 
-function Statistics({}: Props) {
+function Statistics() {
   const statisticsData: StatisticsI[] = [
     {
       id: 1,
