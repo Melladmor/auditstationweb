@@ -63,7 +63,7 @@ const Header = async () => {
     },
   ];
   return (
-    <header className="px_padding py-[24px] bg-mainblack h-[120px] sticky top-0 z-50">
+    <header className="px_padding xl:h-[120px] lg:h-[120px] md:h-[100px]  xl:py-[24px] lg:py-[24px] md:py-[18px] bg-mainblack  sticky top-0 z-50">
       <Box
         h="72px"
         display="flex"
