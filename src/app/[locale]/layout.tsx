@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import { Provider } from "../../components/ui/provider";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Locale, routing } from "@/i18n/routing";
-import { Box } from "@chakra-ui/react";
 import Header from "@/components/NavBar/Header";
 import { ThemeProvider } from "next-themes";
 const poppins = Poppins({
@@ -42,12 +40,10 @@ export default async function LocaleLayout({
       suppressHydrationWarning>
       <body>
         <NextIntlClientProvider messages={messages}>
-          <Provider>
-            <ThemeProvider attribute="data-theme" defaultTheme="light">
-              <Header />
-              <Box className="h-[100vh]">{children}</Box>
-            </ThemeProvider>
-          </Provider>
+          <ThemeProvider attribute="data-theme" defaultTheme="light">
+            <Header />
+            <div className="h-[100vh]">{children}</div>
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>
