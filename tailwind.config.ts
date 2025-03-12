@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+
 export default {
   darkMode: "class",
   content: [
@@ -24,10 +25,8 @@ export default {
           text: "#000000",
           card: "#f8f8f8",
         },
-
-        // Custom Dark Mode Colors
         dark: {
-          background: "#0a0f18",
+          background: "#000",
           text: "#ffffff",
           card: "#1a1f29",
         },
@@ -36,6 +35,6 @@ export default {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["light", "dark"], // Enables both light and dark themes
+    themes: ["light", "dark"],
   },
 } satisfies Config;
