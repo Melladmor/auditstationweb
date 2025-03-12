@@ -1,6 +1,5 @@
 import React from "react";
 import { TitleI } from "./type";
-import { Text } from "@chakra-ui/react";
 import TitleIcon from "./TitleIcon";
 
 type Props = TitleI;

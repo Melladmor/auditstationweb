@@ -5,17 +5,14 @@ import React from "react";
 const OurHappyCustomers = async () => {
   const t = await getTranslations("sections.ourhappycustomers");
   return (
-    <div>
-      {" "}
-      <CustomSection
-        title={{
-          first: t("first"),
-          second: t("second"),
-          subTitle: t("subTitle"),
-        }}>
-        s
-      </CustomSection>
-    </div>
+    <CustomSection
+      title={{
+        first: t("first"),
+        second: t("second"),
+        subTitle: t("subTitle"),
+      }}>
+      s
+    </CustomSection>
   );
 };
 
