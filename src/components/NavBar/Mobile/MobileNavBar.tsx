@@ -48,7 +48,7 @@ const MobileNavBar = ({ linksData }: Props) => {
         <DrawerBody>
           <MobileNavlinks linksData={linksData} />
         </DrawerBody>
-        <DrawerCloseTrigger />
+        <DrawerCloseTrigger color="white" />
       </DrawerContent>
     </DrawerRoot>
   );
