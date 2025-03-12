@@ -1,14 +1,12 @@
-import { Avatar } from "@chakra-ui/react";
 import React from "react";
 
-type Props = {};
-
-const Profile = (props: Props) => {
+const Profile = () => {
   return (
-    <Avatar.Root colorPalette="gray" size="xs">
-      <Avatar.Fallback />
-      <Avatar.Image src="https://bit.ly/broken-link" />
-    </Avatar.Root>
+    <div className="avatar rounded-full">
+      <div className="w-[35px] rounded-full border-[#BDC9CD] border-[2px] p-[1px]">
+        <img src="/images/user.png" />
+      </div>
+    </div>
   );
 };
 
