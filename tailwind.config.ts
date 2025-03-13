@@ -21,12 +21,14 @@ export default {
         mainblack: "#091219",
         secondary: "#FF7701",
         light: {
+          bodyBg: "#ffffff",
           background: "#ffffff",
           text: "#000000",
           card: "#f8f8f8",
         },
         dark: {
-          background: "#000",
+          bodyBg: "#0F0F0F",
+          background: "#000000",
           text: "#ffffff",
           card: "#1a1f29",
         },
@@ -34,7 +36,4 @@ export default {
     },
   },
   plugins: [require("daisyui")],
-  daisyui: {
-    themes: ["light", "dark"],
-  },
 } satisfies Config;

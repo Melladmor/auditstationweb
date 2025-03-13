@@ -24,7 +24,7 @@ const StatisticsCard = ({ cardData, isLast }: Props) => {
         )}{" "}
         {cardData?.value}
       </div>
-      <div className="xl:text-[24px] lg:text-[20px] md:text-[18px] sm:text-[14px] xs:text-[14px] font-[400] text-black text-center">
+      <div className="text-light-text dark:text-dark-text xl:text-[24px] lg:text-[20px] md:text-[18px] sm:text-[14px] xs:text-[14px] font-[400]  text-center">
         {cardData?.title}
       </div>
     </div>

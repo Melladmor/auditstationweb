@@ -6,7 +6,7 @@ type Props = CustomSectionI;
 
 export default function CustomSection({ title, children }: Props) {
   return (
-    <div className="px_padding flex flex-col gap-[32px]">
+    <div className="px_padding flex flex-col gap-[32px] bg-light-bodyBg dark:bg-dark-bodyBg">
       <Title
         first={title.first}
         second={title.second}

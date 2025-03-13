@@ -4,9 +4,12 @@ import Statistics from "./Statistics/Statistics";
 
 function HeroSection() {
   return (
-    <div className="relative w-full xl:mb-[272px] lg:mb-[272px] md:mb-[472px] sm:mb-[650px] xs:mb-[650px]">
-      <Ads />
-      <Statistics />
+    <div>
+      <div className="relative">
+        <Ads />
+        <Statistics />
+      </div>
+      <div className="xl:h-[272px] lg:h-[272px] md:h-[472px] sm:h-[650px] xs:h-[650px] bg-light-bodyBg dark:bg-dark-bodyBg"></div>
     </div>
   );
 }

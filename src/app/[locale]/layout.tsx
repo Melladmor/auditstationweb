@@ -40,9 +40,11 @@ export default async function LocaleLayout({
       suppressHydrationWarning>
       <body>
         <NextIntlClientProvider messages={messages}>
-          <ThemeProvider attribute="data-theme" defaultTheme="light">
+          <ThemeProvider attribute="class">
             <Header />
-            <div className="h-[100vh]">{children}</div>
+            <div className="h-[100vh] bg-light-bodyBg dark:bg-dark-bodyBg">
+              {children}
+            </div>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
