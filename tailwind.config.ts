@@ -17,6 +17,10 @@ export default {
         xl: "1280px",
         "2xl": "1536px",
       },
+      boxShadow: {
+        light: "4px 4px 15px 0px rgba(9, 18, 25, 0.25)",
+        dark: "4px 4px 12px 4px rgba(255, 119, 1, 0.25)",
+      },
       colors: {
         mainblack: "#091219",
         secondary: "#FF7701",
@@ -24,13 +28,15 @@ export default {
           bodyBg: "#ffffff",
           background: "#ffffff",
           text: "#000000",
-          card: "#f8f8f8",
+          card: "#ffffff",
+          border: "#B3B6B8",
         },
         dark: {
           bodyBg: "#0F0F0F",
           background: "#000000",
           text: "#ffffff",
-          card: "#1a1f29",
+          card: "#000000",
+          border: "#B3B6B8",
         },
       },
     },
