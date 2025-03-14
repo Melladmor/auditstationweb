@@ -9,6 +9,7 @@ export default async function HomePage() {
     <div>
       <HeroSection />
       <OurHappyCustomers />
+      <div className="h-[500px]"></div>
     </div>
   );
 }

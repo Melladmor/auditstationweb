@@ -2,10 +2,12 @@ import CustomSection from "@/components/CustomSection/CustomSection";
 import { getTranslations } from "next-intl/server";
 import React from "react";
 import { OurHappyCustomersI } from "./type";
-import OurHappyCustomresCard from "./OurHappyCustomresCard";
+
+import { OurHappyCustomersContainer } from "./OurHappyCustomersContainer";
 
 const OurHappyCustomers = async () => {
   const t = await getTranslations("sections.ourhappycustomers");
+
   const ourHappyCustomersData: OurHappyCustomersI[] = [
     {
       id: 1,
@@ -23,7 +25,7 @@ const OurHappyCustomers = async () => {
           name: "Subcategory",
         },
       ],
-      cta: () => console.log("test"),
+      cta: "www.google.com",
     },
     {
       id: 2,
@@ -41,7 +43,7 @@ const OurHappyCustomers = async () => {
           name: "Subcategory",
         },
       ],
-      cta: () => console.log("test"),
+      cta: "www.google.com",
     },
     {
       id: 3,
@@ -59,7 +61,7 @@ const OurHappyCustomers = async () => {
           name: "Subcategory",
         },
       ],
-      cta: () => console.log("test"),
+      cta: "www.google.com",
     },
     {
       id: 4,
@@ -77,9 +79,10 @@ const OurHappyCustomers = async () => {
           name: "Subcategory",
         },
       ],
-      cta: () => console.log("test"),
+      cta: "www.google.com",
     },
   ];
+
   return (
     <CustomSection
       title={{
@@ -87,9 +90,7 @@ const OurHappyCustomers = async () => {
         second: t("second"),
         subTitle: t("subTitle"),
       }}>
-      {ourHappyCustomersData?.map((el: OurHappyCustomersI) => {
-        return <OurHappyCustomresCard key={el?.id} {...el} />;
-      })}
+      <OurHappyCustomersContainer data={ourHappyCustomersData} />
     </CustomSection>
   );
 };

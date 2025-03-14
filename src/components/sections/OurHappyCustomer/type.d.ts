@@ -6,7 +6,7 @@ export interface OurHappyCustomersI {
   id: number;
   title: string;
   logo: string;
-  category: CategoryT[];
+  category?: CategoryT[];
   description: string;
-  cta?: () => void;
+  cta?: string;
 }
