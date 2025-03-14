@@ -7,7 +7,7 @@ import { NavLinkI } from "../type";
 
 type Props = NavLinkI;
 
-const MobileNavlink = ({ id, isPage, title, url, isDropDwon }: Props) => {
+const MobileNavlink = ({ isPage, title, url, isDropDwon }: Props) => {
   const locale = useLocale();
   const pathname = usePathname();
   const splitedPathName = pathname.slice(`/${locale}`.length);
@@ -18,9 +18,7 @@ const MobileNavlink = ({ id, isPage, title, url, isDropDwon }: Props) => {
         <NavDropDown title={title} items={isDropDwon} isMobile />
       ) : (
         <button
-          className={`w-full h-[40px] p-2 ${
-            locale === "en" ? "text-start" : "text-end"
-          }  text-white text-[20px] font-medium capitalize shadow-sm rounded-md transition-all duration-500 ease-in-out 
+          className={`w-full h-[40px] p-2 text-start  text-white text-[20px] font-medium capitalize shadow-sm rounded-md transition-all duration-500 ease-in-out 
             ${isActive ? "bg-secondary" : ""}
             hover:bg-secondary hover:text-white  hover:shadow-md`}>
           <Link href={isPage ? url : `#${url}`}>{title}</Link>

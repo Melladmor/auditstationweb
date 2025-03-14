@@ -35,7 +35,7 @@ const MobileNavBar = ({ linksData }: Props) => {
       {open && (
         <div className="fixed inset-0 bg-black bg-opacity-75 z-50">
           <div className="absolute left-0 top-0 w-64 bg-black text-white shadow-md h-full rounded-md p-4">
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center mb-3">
               <Logo />
               <button className="text-white" onClick={() => setOpen(false)}>
                 <svg

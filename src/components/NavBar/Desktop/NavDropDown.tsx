@@ -14,34 +14,20 @@ export type NavDropDown = {
 
 const NavBarMobile: React.FC<NavDropDown> = ({ title, items }) => {
   const locale = useLocale();
-  const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
-    <div className="w-full mb-2">
-      <div className="collapse">
-        <input
-          type="checkbox"
-          className="peer"
-          checked={isOpen}
-          onChange={(e) => setIsOpen(e.target.checked)}
-        />
-        <div className="collapse-title flex justify-between items-center text-white p-2 cursor-pointer text-xl font-medium capitalize shadow-sm rounded-md transition-all duration-500 ease-in-out hover:bg-secondary hover:text-white">
-          <span>{title}</span>
-          {locale === "ar" ? (
-            <span>
-              {isOpen ? <IoChevronUpOutline /> : <IoChevronDownOutline />}
-            </span>
-          ) : (
-            <span>
-              {isOpen ? <IoChevronUpOutline /> : <IoChevronDownOutline />}
-            </span>
-          )}
-        </div>
+    <div className="w-full">
+      <details className="collapse collapse-arrow text-xl font-medium capitalize">
+        <summary className="collapse-title flex items-center">{title}</summary>
         <div className="collapse-content">
           <div className="mt-1">
             {items.map((item, index) => (
               <button
                 key={index}
-                className={`w-full text-white rounded-md p-2 text-xl font-medium capitalize shadow-sm transition-all duration-500 ease-in-out hover:bg-secondary hover:text-white`}>
+                className={`w-full text-start ${
+                  locale === "ar"
+                    ? "border-r border-secondary"
+                    : "border-l-[2px] border-secondary"
+                } text-white mb-1 p-2 text-xl font-medium capitalize shadow-sm transition-all duration-500 ease-in-out`}>
                 <Link href={item.isPage ? item.url : `#${item.url}`}>
                   {item.title}
                 </Link>
@@ -49,7 +35,7 @@ const NavBarMobile: React.FC<NavDropDown> = ({ title, items }) => {
             ))}
           </div>
         </div>
-      </div>
+      </details>
     </div>
   );
 };
