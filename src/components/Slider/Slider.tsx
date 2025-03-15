@@ -22,7 +22,7 @@ export default function Slider<T>({ initialData, renderItem }: SliderT<T>) {
       <Swiper
         slidesPerView={isSmall ? 1 : isTablet ? 2 : 3}
         spaceBetween={20}
-        className="h-[380px]">
+        className="xl:h-[380px] lg:h-[380px] md:h-[380px] sm:h-[300px] xs:h-[300px]">
         {initialData?.map((item, index) => (
           <SwiperSlide key={index}>{renderItem(item)}</SwiperSlide>
         ))}

@@ -4,6 +4,7 @@ import React from "react";
 import { OurHappyCustomersI } from "./type";
 
 import { OurHappyCustomersContainer } from "./OurHappyCustomersContainer";
+import Button from "@/components/Buttons/Button";
 
 const OurHappyCustomers = async () => {
   const t = await getTranslations("sections.ourhappycustomers");
