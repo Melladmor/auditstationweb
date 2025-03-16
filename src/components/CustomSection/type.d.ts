@@ -1,6 +1,7 @@
 import { TitleI } from "../Title/type";
 
 export interface CustomSectionI {
-  title: TitleI;
+  title?: TitleI;
+  className?: string;
   children: React.ReactNode;
 }

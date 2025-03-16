@@ -16,7 +16,12 @@
       "first": "Our Happy",
       "second": "Customers",
       "subTitle": "At Audit Station, our success is measured by the trust and satisfaction of our clients. Through expert auditing and tax solutions, we help businesses achieve financial clarity, compliance, and growth."
+    },
+    "aboutussection": {
+      "first": "About",
+      "second": "Us"
     }
   },
-  "seemore": "See More"
+  "seemore": "See More",
+  "readmore": "Read More"
 }

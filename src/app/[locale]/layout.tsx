@@ -36,13 +36,13 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={locale === "en" ? "ltr" : "rtl"}
-      className={`${poppins.className} `}
+      className={`${poppins.className}`}
       suppressHydrationWarning>
       <body>
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider attribute="class">
             <Header />
-            <div className="h-[100vh] bg-light-bodyBg dark:bg-dark-bodyBg">
+            <div className="bg-light-bodyBg dark:bg-dark-bodyBg">
               {children}
             </div>
           </ThemeProvider>
