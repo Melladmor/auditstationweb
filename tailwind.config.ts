@@ -23,7 +23,7 @@ export default {
       },
       boxShadow: {
         light: "4px 4px 15px 0px rgba(9, 18, 25, 0.25)",
-        dark: "4px 4px 12px 4px rgba(255, 119, 1, 0.25)",
+        dark: "0",
       },
       colors: {
         mainblack: "#091219",

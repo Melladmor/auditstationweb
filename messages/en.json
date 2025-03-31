@@ -20,6 +20,11 @@
     "aboutussection": {
       "first": "About",
       "second": "Us"
+    },
+    "ourservices": {
+      "first": "Our",
+      "second": "Services",
+      "subTitle": "At Audit Station, we provide expert tax, auditing, and financial consultancy services tailored to help businesses stay compliant, optimize performance, and drive sustainable growth."
     }
   },
   "seemore": "See More",

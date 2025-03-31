@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import OurHappyCustomers from "@/components/sections/OurHappyCustomer/OurHappyCustomers";
 import AboutUsSection from "@/components/sections/AboutUs/AboutUsSection";
+import OurServicesSection from "@/components/sections/OurServices/OurServicesSection";
 
 export default async function HomePage() {
   const t = await getTranslations();
@@ -11,6 +12,7 @@ export default async function HomePage() {
       <HeroSection />
       <OurHappyCustomers />
       <AboutUsSection />
+      {/* <OurServicesSection /> */}
     </div>
   );
 }

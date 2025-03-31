@@ -6,7 +6,7 @@ import CustomSection from "@/components/CustomSection/CustomSection";
 const AboutUsSection = async () => {
   const t = await getTranslations("sections.aboutussection");
   return (
-    <CustomSection className="py-[100px]">
+    <CustomSection className="mt-[100px]">
       <AboutUsSectionContainer
         first={t("first")}
         second={t("second")}

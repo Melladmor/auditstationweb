@@ -7,7 +7,7 @@ type Props = TitleI;
 const Title = ({ first, second, subTitle, className }: Props) => {
   return (
     <div
-      className={`mb-[32px] flex flex-col xl:gap-[32px] lg:gap-[32px] md:gap-[28px] sm:gap-[24px] xs:gap-[15px] justify-center items-center ${className}`}>
+      className={` ${className} xl:mb-[32px]  flex flex-col xl:gap-[32px] lg:gap-[32px] md:gap-[28px] sm:gap-[24px] xs:gap-[15px] justify-center items-center `}>
       <div className="flex flex-row flex-nowrap gap-[16px] items-center">
         <TitleIcon />
         <h1 className="xl:text-[32px] lg:xt-[30px] md:text-[24px] sm:text-[20px] xs:text-[20px] font-[700] capitalize">

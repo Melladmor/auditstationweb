@@ -90,7 +90,8 @@ const OurHappyCustomers = async () => {
         first: t("first"),
         second: t("second"),
         subTitle: t("subTitle"),
-      }}>
+      }}
+      className="mt-[100px]">
       <OurHappyCustomersContainer data={ourHappyCustomersData} />
     </CustomSection>
   );

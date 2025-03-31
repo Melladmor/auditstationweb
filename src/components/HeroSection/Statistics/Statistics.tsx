@@ -35,7 +35,7 @@ function Statistics() {
   ];
 
   return (
-    <div className="xl:h-[172px] lg:h-[172px] md:h-auto sx:h-auto xs:h-auto  w-full px_padding  absolute z-10 lg:bottom-[-30%] md:bottom-[-80%] xs:bottom-[-185%]">
+    <div className="xl:h-[172px] lg:h-[172px] md:h-auto sx:h-auto xs:h-auto  w-full px_padding  xl:absolute lg:absolute md:relative sm:relative xs:relative z-10 xl:bottom-[4%] lg:bottom-[4%]">
       <div className="bg-[#F2FAEC] dark:bg-dark-background px-[24px] py-[16px] dark:shadow-dark w-full h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 items-center">
         {statisticsData.map((el, index) => (
           <StatisticsCard
@@ -50,3 +50,4 @@ function Statistics() {
 }
 
 export default Statistics;
+// absolute z-10 lg:bottom-[-30%] md:bottom-[-80%] xs:bottom-[-185%]
