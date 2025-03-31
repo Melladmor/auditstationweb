@@ -12,7 +12,7 @@ export default async function HomePage() {
       <HeroSection />
       <OurHappyCustomers />
       <AboutUsSection />
-      {/* <OurServicesSection /> */}
+      <OurServicesSection />
     </div>
   );
 }

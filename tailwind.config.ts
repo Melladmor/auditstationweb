@@ -17,10 +17,6 @@ export default {
         xl: "1280px",
         "2xl": "1536px",
       },
-      backgroundImage: {
-        button_hover:
-          "linear-gradient(90deg, #FF7701 6.28%, rgba(9, 18, 25, 0.54) 50%)",
-      },
       boxShadow: {
         light: "4px 4px 15px 0px rgba(9, 18, 25, 0.25)",
         dark: "0",
