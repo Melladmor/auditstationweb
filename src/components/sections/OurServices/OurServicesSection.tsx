@@ -14,29 +14,60 @@ const OurServicesSection = async () => {
       title: "Accounting & CFO Services",
       subServices: [
         { id: 1, title: "BOOKKEEPING" },
-        { id: 2, title: "BOOKKEEPING" },
-        { id: 3, title: "BOOKKEEPING" },
-        { id: 4, title: "BOOKKEEPING" },
-        { id: 5, title: "BOOKKEEPING" },
+        { id: 2, title: "Reconciliation" },
+        { id: 3, title: "Financial Manager" },
+        { id: 4, title: "Online Financial Management" },
+        { id: 5, title: "Off-site Accounting" },
+        { id: 6, title: "Accountant Appointment" },
+        { id: 7, title: "Online Accounting" },
+        { id: 8, title: "Financial Issuance" },
       ],
       bg: "#FF7701",
     },
     {
       id: 2,
       title: "Internal Auditing Services",
-      subServices: [],
+      subServices: [
+        { id: 1, title: "BOOKKEEPING" },
+        { id: 2, title: "Reconciliation" },
+        { id: 3, title: "Financial Manager" },
+        { id: 4, title: "Online Financial Management" },
+        { id: 5, title: "Off-site Accounting" },
+        { id: 6, title: "Accountant Appointment" },
+        { id: 7, title: "Online Accounting" },
+        { id: 8, title: "Financial Issuance" },
+      ],
       bg: "#C94A8C",
     },
     {
       id: 3,
       title: "Software Services",
-      subServices: [],
+      subServices: [
+        { id: 1, title: "BOOKKEEPING" },
+        { id: 2, title: "Reconciliation" },
+        { id: 3, title: "Financial Manager" },
+        { id: 4, title: "Online Financial Management" },
+        { id: 5, title: "Off-site Accounting" },
+        { id: 6, title: "Accountant Appointment" },
+        { id: 7, title: "Online Accounting" },
+        { id: 8, title: "Financial Issuance" },
+      ],
+      className: "xs:mt-[60px]",
       bg: "#825698",
     },
     {
       id: 4,
       title: "TAX Services",
-      subServices: [],
+      subServices: [
+        { id: 1, title: "BOOKKEEPING" },
+        { id: 2, title: "Reconciliation" },
+        { id: 3, title: "Financial Manager" },
+        { id: 4, title: "Online Financial Management" },
+        { id: 5, title: "Off-site Accounting" },
+        { id: 6, title: "Accountant Appointment" },
+        { id: 7, title: "Online Accounting" },
+        { id: 8, title: "Financial Issuance" },
+      ],
       bg: "#80CE42",
     },
   ];
@@ -53,7 +84,7 @@ const OurServicesSection = async () => {
         {ourServicesData?.map((el: OurServicesI) => {
           return <OurServicesCard key={el?.id} data={el} />;
         })}
-        <div className="xl:w-[330px] xl:h-[330px] lg:w-[330px] lg:h-[330px] md:w-[220px] md:h-[220px] sm:w-[220px] sm:h-[220px] xs:w-[150px] xs:h-[150px] bg-[#F2FAEC] rounded-full p-[15px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center">
+        <div className="xl:w-[330px] xl:h-[330px] lg:w-[280px] lg:h-[280px] md:w-[160px] md:h-[160px] sm:w-[220px] sm:h-[220px] xs:w-[150px] xs:h-[150px] bg-[#F2FAEC] rounded-full p-[15px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center">
           <Image
             src="/logos/auditlogoblack.svg"
             alt="/logos/auditlogoblack.svg"

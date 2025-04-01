@@ -10,4 +10,5 @@ export interface OurServicesI {
   title: string;
   bg: string;
   subServices: SubServicesT[];
+  className?: string;
 }
