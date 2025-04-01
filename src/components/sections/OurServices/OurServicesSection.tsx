@@ -47,7 +47,8 @@ const OurServicesSection = async () => {
         second: t("second"),
         subTitle: t("subTitle"),
       }}
-      className="mt-[100px]">
+      className="mt-[100px]"
+      id="services">
       <div className="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 gap-6 relative">
         {ourServicesData?.map((el: OurServicesI) => {
           return <OurServicesCard key={el?.id} data={el} />;

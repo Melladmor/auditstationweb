@@ -9,5 +9,5 @@ export interface NavLinkI {
   title: string;
   isPage: boolean;
   url: string;
-  isDropDwon?: DropDownLinkT[];
+  isDropDown?: DropDownLinkT[];
 }

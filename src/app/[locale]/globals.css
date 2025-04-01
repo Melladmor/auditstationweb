@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+* {
+  scroll-behavior: smooth;
+}
 .theme-switch {
   position: relative;
 
@@ -33,7 +36,7 @@
   .links::after {
     content: "";
     @apply absolute left-0 w-full h-[2px] bg-secondary;
-    bottom: -8px;
+    bottom: -4px;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.2s ease-in-out;
@@ -49,7 +52,7 @@
   .links_active::after {
     content: "";
     @apply absolute left-0 w-full h-[2px] bg-secondary;
-    bottom: -8px;
+    bottom: -4px;
     transform: scaleX(1); /* Active state should always show the underline */
     transform-origin: left;
     transition: transform 0.2s ease-in-out;

@@ -1,10 +1,11 @@
 import { getTranslations } from "next-intl/server";
 import { NavLinkI } from "./type";
-import LanguageSelect from "./LangaugeSelect";
-import { ThemeSwitcher } from "./ThemeSwitcher";
-
-import NavBar from "./NavBar";
-import Profile from "./Profile";
+import LanguageSelect from "./Components/LangaugeSelect";
+import { ThemeSwitcher } from "./Components/ThemeSwitcher";
+import Profile from "./Components/Profile";
+import Logo from "./Components/Logo";
+import NavItemsMobile from "./Mobile/NavItemsMobile";
+import NavBar from "./Components/NavBar";
 
 const Header = async () => {
   const t = await getTranslations("navbarlinks");
@@ -21,7 +22,7 @@ const Header = async () => {
       title: t("services.services"),
       url: "services",
       isPage: false,
-      isDropDwon: [
+      isDropDown: [
         {
           id: 1,
           title: t("services.mainservices"),
@@ -62,13 +63,53 @@ const Header = async () => {
     },
   ];
   return (
-    <header className="px_padding xl:h-[120px] lg:h-[120px] md:h-[100px]  xl:py-[24px] lg:py-[24px] md:py-[18px] bg-mainblack  sticky top-0 z-50">
-      <div className="h-[72px] flex justify-between items-center">
-        <NavBar linksData={linksData} />
-        <div className="flex items-center gap-[8px]">
-          <ThemeSwitcher />
-          <LanguageSelect />
-          <Profile />
+    <header className="px_padding xl:py-[12px] lg:py-[12px] md:py-[12px] sticky top-0 z-50 bg-mainblack">
+      <div className="drawer z-50">
+        <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+        <div className="drawer-content flex flex-col">
+          <div className="w-full navbar">
+            <div className="navbar-start">
+              <div className="hidden lg:block">
+                <Logo />
+              </div>
+              <div className="lg:hidden">
+                <label
+                  htmlFor="my-drawer"
+                  className="md:size-[30px] sm:size-[25px] text-white xs:size-[25px] bg-white rounded-sm flex justify-center items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="size-[15px] text-[#FF7701]"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <NavBar linksData={linksData} />
+            <div className="navbar-end ">
+              <div className="hidden lg:block">
+                <ThemeSwitcher />
+              </div>
+              <div className="hidden lg:block">
+                <LanguageSelect />
+              </div>
+              <Profile />
+            </div>
+          </div>
+        </div>
+
+        <div className="drawer-side ">
+          <label htmlFor="my-drawer" className="drawer-overlay"></label>
+          <div className="bg-dark-bodyBg  h-[100vh] w-[80%]">
+            <NavItemsMobile linksData={linksData} />
+          </div>
         </div>
       </div>
     </header>

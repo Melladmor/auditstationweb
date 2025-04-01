@@ -4,9 +4,15 @@ import Title from "../Title/Title";
 
 type Props = CustomSectionI;
 
-export default function CustomSection({ title, className, children }: Props) {
+export default function CustomSection({
+  id,
+  title,
+  className,
+  children,
+}: Props) {
   return (
     <div
+      id={id}
       className={`px_padding flex flex-col gap-[32px] bg-light-bodyBg dark:bg-dark-bodyBg ${className}`}>
       {title ? (
         <Title
