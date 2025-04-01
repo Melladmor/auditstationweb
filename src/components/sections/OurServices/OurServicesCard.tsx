@@ -1,11 +1,16 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { OurServicesI, SubServicesT } from "./type";
+import OurServciesModal from "./OurServciesModal";
 
 type Props = {
   data: OurServicesI;
 };
 
 const OurServicesCard = ({ data }: Props) => {
+  const [modalData, setModalData] = useState<SubServicesT | null>(null);
+
+  const onClose = () => setModalData(null);
   return (
     <div
       className={`xl:h-[548px] lg:h-[548px] md:h-[430px] sm:h-[480px] xs:h-[380px] px-[24px] xl:py-[24px] lg:py-[24px] md:py-[24px] sm:py-[20px] xs:py-[14px] rounded-[16px] shadow-light `}
@@ -21,15 +26,23 @@ const OurServicesCard = ({ data }: Props) => {
       <ul className="xl:px-[50px]  lg:px-[20px]  md:px-0  sm:px-[8px]  xs:px-[8px]">
         {data.subServices?.map((el: SubServicesT) => {
           return (
-            <li key={el?.id} className="flex items-center gap-2 mb-2">
-              <div className="xl:w-[16px] xl:h-[16px] lg:w-[16px] lg:h-[16px] md:w-[14px] md:h-[14px] sm:w-[14px] sm:h-[14px] xs:w-[12px] xs:h-[12px] rounded-full bg-white"></div>
-              <p className="xl:text-[20px] lg:text-[20px] md:text-[16px] sm:text-[12px] xs:text-[12px] text-white font-medium">
-                {el?.title}
-              </p>
-            </li>
+            <label
+              htmlFor={modalData ? String(modalData?.id) : ""}
+              key={el?.id}>
+              <li
+                key={el?.id}
+                onClick={() => setModalData(el)}
+                className="flex items-center gap-2 mb-2 ">
+                <div className="xl:w-[16px] xl:h-[16px] lg:w-[16px] lg:h-[16px] md:w-[14px] md:h-[14px] sm:w-[14px] sm:h-[14px] xs:w-[12px] xs:h-[12px] rounded-full bg-white"></div>
+                <p className="xl:text-[20px] lg:text-[20px] md:text-[16px] sm:text-[12px] xs:text-[12px] text-white font-medium subservicesLinks">
+                  {el?.title}
+                </p>
+              </li>
+            </label>
           );
         })}
       </ul>
+      {modalData ? <OurServciesModal data={modalData} onClose={onClose} /> : ""}
     </div>
   );
 };

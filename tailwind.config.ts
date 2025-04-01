@@ -20,6 +20,7 @@ export default {
       boxShadow: {
         light: "4px 4px 15px 0px rgba(9, 18, 25, 0.25)",
         dark: "0",
+        cta_button: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
       },
       colors: {
         mainblack: "#091219",
