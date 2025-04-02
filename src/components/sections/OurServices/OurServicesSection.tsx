@@ -1,13 +1,14 @@
-import Title from "@/components/Title/Title";
 import { getTranslations } from "next-intl/server";
 import React from "react";
 import { OurServicesI } from "./type";
 import OurServicesCard from "./OurServicesCard";
 import CustomSection from "@/components/CustomSection/CustomSection";
 import Image from "next/image";
+import Button from "@/components/Buttons/Button";
 
 const OurServicesSection = async () => {
   const t = await getTranslations("sections.ourservices");
+  const btnTitle = await getTranslations();
   const ourServicesData: OurServicesI[] = [
     {
       id: 1,
@@ -223,6 +224,14 @@ const OurServicesSection = async () => {
             loading="lazy"
           />
         </div>
+      </div>
+      <div className="flex items-center justify-center xl:mt-[32px] lg:mt-[32px] md:mt-[25px] sm:mt-[20px] xs:mt-[20px]">
+        <Button
+          title={btnTitle("seemore")}
+          isLink
+          path="/packages"
+          className="btn_size"
+        />
       </div>
     </CustomSection>
   );

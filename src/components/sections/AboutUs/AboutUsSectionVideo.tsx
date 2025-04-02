@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { AboutUsPlayButton } from "./AboutUsPlayButton";
 import VideoModal from "@/components/VideoPlayer/modal/VideoModal";

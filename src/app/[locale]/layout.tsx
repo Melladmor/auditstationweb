@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Locale, routing } from "@/i18n/routing";
 import Header from "@/components/NavBar/Header";
 import { ThemeProvider } from "next-themes";
+import "./globals.css";
+
 const poppins = Poppins({
   weight: "400",
   subsets: ["latin"],

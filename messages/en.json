@@ -25,9 +25,19 @@
       "first": "Our",
       "second": "Services",
       "subTitle": "At Audit Station, we provide expert tax, auditing, and financial consultancy services tailored to help businesses stay compliant, optimize performance, and drive sustainable growth."
+    },
+    "packages": {
+      "first": "Our",
+      "second": "Packages",
+      "subTitle": "We offer flexible and tailored packages designed to meet your business needs. Whether you're looking for comprehensive auditing, tax consultancy, or financial advisory services, our plans ensure accuracy, compliance, and efficiency."
     }
   },
   "seemore": "See More",
   "readmore": "Read More",
-  "readdetails": "Read Details"
+  "readdetails": "Read Details",
+  "aed": "AED",
+  "mon": "/mo",
+  "contactus": "Contact Us",
+  "features": "Features",
+  "compare_packages": "Compare Packages"
 }

@@ -1,26 +1,22 @@
-"use client";
 import Title from "@/components/Title/Title";
-import React from "react";
 import { AboutUsSectionI } from "./type";
 import Button from "@/components/Buttons/Button";
-import { useTranslations } from "next-intl";
-import { useRouter } from "next/navigation";
 import AboutUsSectionVideo from "./AboutUsSectionVideo";
+import { getTranslations } from "next-intl/server";
 
 type Props = AboutUsSectionI & {
   first: string;
   second: string;
 };
 
-const AboutUsSectionContainer = ({
+const AboutUsSectionContainer = async ({
   description,
   first,
   second,
   title,
   video,
 }: Props) => {
-  const t = useTranslations();
-  const navigate = useRouter();
+  const t = await getTranslations();
   return (
     <div className="flex xl:flex-row lg:flex-row md:flex-row sm:flex-col xs:flex-col items-start gap-[24px]  w-full ">
       <div className=" flex flex-col items-start  xl:gap-[32px] lg:gap-[28px] md:gap-[24px] sm:gap-[20px] xs:gap-[16px]">
@@ -30,7 +26,9 @@ const AboutUsSectionContainer = ({
         </p>
         <Button
           title={t("readmore")}
-          onClick={() => navigate.push("aboutus")}
+          isLink
+          className="btn_size"
+          path="aboutus"
         />
       </div>
       <AboutUsSectionVideo url="" />

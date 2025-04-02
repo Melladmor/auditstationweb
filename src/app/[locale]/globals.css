@@ -1,9 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-* {
-  scroll-behavior: smooth;
-}
+
 .theme-switch {
   position: relative;
 
@@ -100,5 +98,8 @@
   }
   .image_circle {
     @apply absolute top-[-5px] left-[-5px] xl:w-[120px] xl:h-[120px] lg:w-[120px] lg:h-[120px] md:w-[120px] md:h-[120px] sm:w-[90px] sm:h-[90px] xs:w-[90px] xs:h-[90px] bg-white rounded-full z-40 shadow-md flex justify-center items-center;
+  }
+  .btn_size {
+    @apply xl:h-[56px] lg:h-[56px] md:h-[45px] sm:h-[40px] xs:h-[40px] xl:min-w-[300px] lg:min-w-[300px] md:min-w-[250px] sm:min-w-[200px] xs:min-w-[225px];
   }
 }

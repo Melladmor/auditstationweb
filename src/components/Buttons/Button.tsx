@@ -1,31 +1,52 @@
 import React from "react";
+import { twMerge } from "tailwind-merge";
 import { ButtonI } from "./type";
+import Link from "next/link";
 
 type Props = ButtonI;
 
-function Button({ onClick, title, className, icon, isLoading }: Props) {
+function Button({
+  onClick,
+  title,
+  className = "",
+  icon,
+  isLoading,
+  isLink,
+  path,
+}: Props) {
+  const baseStyles = `px-[10px] py-[10px] rounded-[8px] bg-dark-background 
+    dark:bg-light-bodyBg text-white hover:bg-secondary dark:hover:bg-secondary hover:dark:text-white 
+    dark:text-light-text flex items-center justify-center gap-2 transition-colors duration-500 ease-out 
+    disabled:opacity-20`;
+
   return (
-    <button
-      onClick={(e) => {
-        e.stopPropagation();
-        if (onClick) onClick();
-      }}
-      disabled={isLoading}
-      className={`xl:min-w-[300px] lg:min-w-[300px] md:min-w-[250px] sm:min-w-[200px] xs:min-w-[225px]  xl:h-[56px] lg:h-[56px] md:h-[45px] sm:h-[40px] xs:h-[40px] p-[10px] rounded-[8px] bg-dark-background 
-        dark:bg-light-bodyBg text-white hover:bg-secondary dark:hover:bg-secondary hover:dark:text-white dark:text-light-text flex items-center justify-center gap-2
-        transition-colors duration-500 ease-out 
-         disabled:opacity-20 ${className}`}>
-      {isLoading ? (
-        <span className="loading loading-infinity loading-xl"></span>
+    <div>
+      {isLink && path ? (
+        <Link href={path} className={twMerge(baseStyles, className)}>
+          <div className="flex items-center gap-2">
+            {icon && <span>{icon}</span>}
+            <p className="font-[700] text-[16px]">{title}</p>
+          </div>
+        </Link>
       ) : (
-        <div className="flex items-center gap-2">
-          {icon && <span>{icon}</span>}
-          <p className="xl:text-[20px] lg:text-[20px] md:text-[18px] sm:text-[16px] xs:text-[16px] font-[700]">
-            {title}
-          </p>
-        </div>
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            if (onClick) onClick();
+          }}
+          disabled={isLoading}
+          className={twMerge(baseStyles, className)}>
+          {isLoading ? (
+            <span className="loading loading-infinity loading-xl"></span>
+          ) : (
+            <div className="flex items-center gap-2">
+              {icon && <span>{icon}</span>}
+              <p className="font-[700] text-[16px]">{title}</p>
+            </div>
+          )}
+        </button>
       )}
-    </button>
+    </div>
   );
 }
 
