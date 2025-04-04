@@ -47,16 +47,18 @@ export default function Collapse({ btnClassName, title }: Props) {
       {/* Button */}
 
       {/* Collapsible Content */}
-      <div
-        className={`w-full overflow-x-scroll rounded-[20px] px-[24px] py-[48px] border border-[#757575]  transition-all duration-300 ${
-          isOpen
-            ? "opacity-100 scale-100 visible"
-            : "opacity-0 scale-95 invisible"
-        }`}>
-        <div className="w-[5000px]">
-          <ComparePackages />
+      {isOpen && (
+        <div
+          className={`w-full overflow-x-scroll rounded-[20px] px-[24px] py-[48px] border border-[#757575]  transition-all duration-300 ${
+            isOpen
+              ? "opacity-100 scale-100 visible"
+              : "opacity-0 scale-95 invisible"
+          }`}>
+          <div className="w-[5000px]">
+            <ComparePackages />
+          </div>
         </div>
-      </div>
+      )}
       {isOpen && (
         <div className="flex justify-center items-center mt-[32px]">
           <button

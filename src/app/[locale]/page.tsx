@@ -5,6 +5,7 @@ import OurHappyCustomers from "@/components/sections/OurHappyCustomer/OurHappyCu
 import AboutUsSection from "@/components/sections/AboutUs/AboutUsSection";
 import OurServicesSection from "@/components/sections/OurServices/OurServicesSection";
 import PackagesSection from "@/components/sections/Packages/PackagesSection";
+import OurPlatform from "@/components/sections/OurPlatform/OurPlatform";
 
 export default async function HomePage() {
   const t = await getTranslations();
@@ -14,6 +15,8 @@ export default async function HomePage() {
       <OurHappyCustomers />
       <AboutUsSection />
       <OurServicesSection />
+      <PackagesSection />
+      <OurPlatform />
       <PackagesSection />
     </div>
   );

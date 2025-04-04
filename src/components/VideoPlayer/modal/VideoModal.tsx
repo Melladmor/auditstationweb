@@ -10,7 +10,7 @@ const VideoModal = ({ children, modal_setting }: Props) => {
   return (
     <div>
       {modal_setting?.show ? (
-        <div className="w-full flex items-center justify-center flex-col gap-2 h-[100vh] fixed inset-0 modal_overlay_bg lg:px-[100px] md:px-[100px] sm:px-[25px] xs:px-[25px]  z-[9999] ">
+        <div className="w-full  flex items-center justify-center flex-col gap-2 h-[100vh] fixed inset-0 modal_overlay_bg lg:px-[100px] md:px-[100px] sm:px-[25px] xs:px-[25px]  z-[9999] ">
           <div className=" w-full flex items-center justify-end">
             <button onClick={modal_setting?.handleShowModal}>
               <svg
@@ -25,7 +25,9 @@ const VideoModal = ({ children, modal_setting }: Props) => {
               </svg>
             </button>
           </div>
-          <div className="w-full">{children}</div>
+          <div className="w-full xl:h-[90vh] lg:h-[90vh] md:h-[70vh] sm:-h-[50vh] xs:h-[50vh]">
+            {children}
+          </div>
         </div>
       ) : (
         ""

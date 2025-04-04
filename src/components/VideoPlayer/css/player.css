@@ -1,5 +1,5 @@
 .video_h_w {
-  @apply w-full lg:h-[576px] md:h-[400px] sm:h-full xs:h-full;
+  @apply w-full h-full sm:h-full xs:h-full;
 }
 
 .main_play_button {

@@ -13,9 +13,6 @@ const PackagesContainer = ({ data }: Props) => {
     <div>
       <Slider
         initialData={data}
-        slidePerViewLg={4}
-        slidePerViewMd={3}
-        spaceBetween={30}
         renderItem={(item) => {
           return <PackagesCard key={item?.id} {...item} />;
         }}

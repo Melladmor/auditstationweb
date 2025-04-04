@@ -15,6 +15,8 @@ export function OurHappyCustomersContainer({ data }: Props) {
     <div>
       <Slider
         initialData={data}
+        slidePerViewXl={3}
+        slidePerViewLg={2}
         renderItem={(item) => {
           return <OurHappyCustomresCard key={item?.id} {...item} />;
         }}
