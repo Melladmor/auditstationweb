@@ -24,7 +24,7 @@ export default function LanguageSelect() {
   }
 
   return (
-    <ul className="menu menu-horizontal px-1">
+    <ul className="menu menu-horizontal px-1 lg:mx-2">
       <li>
         <details className="text-white">
           <summary className="flex items-center">

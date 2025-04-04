@@ -69,7 +69,7 @@ const Header = async () => {
         <div className="drawer-content flex flex-col">
           <div className="w-full navbar">
             <div className="navbar-start">
-              <div className="hidden lg:block">
+              <div className="hidden xl:block lg:block">
                 <Logo />
               </div>
               <div className="lg:hidden">
@@ -105,7 +105,7 @@ const Header = async () => {
           </div>
         </div>
 
-        <div className="drawer-side ">
+        <div className="drawer-side">
           <label htmlFor="my-drawer" className="drawer-overlay"></label>
           <div className="bg-dark-bodyBg  h-[100vh] w-[80%]">
             <NavItemsMobile linksData={linksData} />

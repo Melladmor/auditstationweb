@@ -16,7 +16,7 @@ const NavLink = ({ isPage, title, url, isDropDown }: Props) => {
     <ul className="menu menu-horizontal px-1">
       {isDropDown ? (
         <li
-          className={`links xl:text-[20px] lg:text-[16px] ${
+          className={`links xl:text-[20px] lg:text-[14px] ${
             isActiveLink ? "links_active text-secondary" : "text-white"
           } `}>
           <details>
@@ -38,7 +38,7 @@ const NavLink = ({ isPage, title, url, isDropDown }: Props) => {
         </li>
       ) : (
         <li
-          className={`links xl:text-[20px] lg:text-[16px] ${
+          className={`links xl:text-[20px] lg:text-[14px] ${
             isActiveLink ? "links_active text-secondary" : "text-white"
           } `}>
           <Link href={isPage ? url : `#${url}`}>{title}</Link>
