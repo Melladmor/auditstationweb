@@ -2,6 +2,7 @@
 import { useState, useRef, useEffect } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { twMerge } from "tailwind-merge";
+import ComparePackages from "../sections/Packages/ComparePackages/ComparePackages";
 type Props = {
   btnClassName?: string;
   title: string;
@@ -52,9 +53,9 @@ export default function Collapse({ btnClassName, title }: Props) {
             ? "opacity-100 scale-100 visible"
             : "opacity-0 scale-95 invisible"
         }`}>
-        <p className="text-gray-800 w-[5000px]">
-          This is the collapsible content.
-        </p>
+        <div className="w-[5000px]">
+          <ComparePackages />
+        </div>
       </div>
       {isOpen && (
         <div className="flex justify-center items-center mt-[32px]">

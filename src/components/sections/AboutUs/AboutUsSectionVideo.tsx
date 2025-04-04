@@ -17,10 +17,10 @@ const AboutUsSectionVideo = (props: Props) => {
       <div
         className="xl:w-[478px] xl:h-[437px] lg:w-[430px] lg:h-[410px] md:w-[260px] md:h-[215px] sm:w-full sm:h-[230px] xs:w-full xs:h-[230px] bg-white  inset-0 bg-contain bg-center"
         style={{ backgroundImage: "url('/images/aboutus.png')" }}>
-        <div
-          className="w-full h-full bg-black bg-opacity-40 flex items-center justify-center"
-          onClick={() => setShow(!show)}>
-          <AboutUsPlayButton />
+        <div className="w-full h-full bg-black bg-opacity-40 flex items-center justify-center">
+          <div onClick={() => setShow(!show)}>
+            <AboutUsPlayButton />
+          </div>
         </div>
       </div>
       <VideoModal
@@ -30,7 +30,7 @@ const AboutUsSectionVideo = (props: Props) => {
         }}>
         <VideoPlayer
           customClass="border-gray_1 border-[2px] rounded-md shadow-lg shadow-gray_2 "
-          videoLink="https://www.youtube.com/watch?v=kHh2A0W9_Y8"
+          videoLink="/videos/audit.mp4"
         />
       </VideoModal>
     </div>
