@@ -11,8 +11,3 @@ export interface PackagesI {
   features: FeatureT[];
   color?: string;
 }
-
-
-export interface ComparePackagesI {
-  
-}

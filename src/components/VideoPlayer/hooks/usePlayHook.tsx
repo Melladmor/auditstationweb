@@ -1,8 +1,6 @@
 import { useRef, useState } from "react";
-import useTrackHook from "./useTrackHook"; // Import the custom tracking hook
-import { UsePlayHookReturn } from "../../../hooks/hook";
-
-// Define the return type of the hook
+import useTrackHook from "./useTrackHook";
+import { UsePlayHookReturn } from "../player";
 
 export default function usePlayHook(): UsePlayHookReturn {
   const videoRef = useRef<HTMLVideoElement | null>(null);

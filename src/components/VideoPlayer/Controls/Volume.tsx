@@ -1,6 +1,6 @@
 "use client";
 
-import { UseVolumeReturn } from "@/hooks/hook";
+import { UseVolumeReturn } from "../player";
 import styles from "./styles.module.css";
 
 type Props = UseVolumeReturn;

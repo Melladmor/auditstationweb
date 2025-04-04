@@ -6,7 +6,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 type Props = ButtonI;
 
-const CtaButton = ({ onClick, title, className, icon, isLoading }: Props) => {
+const CtaButton = ({ onClick, title }: Props) => {
   return (
     <button
       onClick={(e) => {

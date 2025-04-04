@@ -13,8 +13,6 @@ const AboutUsSectionContainer = async ({
   description,
   first,
   second,
-  title,
-  video,
 }: Props) => {
   const t = await getTranslations();
   return (
@@ -31,7 +29,7 @@ const AboutUsSectionContainer = async ({
           path="aboutus"
         />
       </div>
-      <AboutUsSectionVideo url="" />
+      <AboutUsSectionVideo url="/videos/audit.mp4" />
     </div>
   );
 };

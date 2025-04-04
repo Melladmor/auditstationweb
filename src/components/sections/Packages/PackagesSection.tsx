@@ -8,7 +8,6 @@ import Collapse from "@/components/collapse/Collapse";
 const PackagesSection = async () => {
   const t = await getTranslations("sections.packages");
   const btnTitle = await getTranslations();
-  const colors = ["#874F9E", "#80CE42", "#FF7600", "#A7CCCD", "#D6A4A4"];
   const packagesData: PackagesI[] = [
     {
       id: 1,

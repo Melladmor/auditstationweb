@@ -8,7 +8,7 @@ type Props = {
   url: string;
 };
 
-const AboutUsSectionVideo = (props: Props) => {
+const AboutUsSectionVideo = ({ url }: Props) => {
   const [show, setShow] = useState<boolean>(false);
   return (
     <div className="xl:w-[526px] xl:h-[492px] lg:w-[500px] lg:h-[450px] md:w-[300px] md:h-[250px] sm:w-full sm:h-[260px] xs:w-full xs:h-[260px] xl:p-[24px] lg:p-[20px] md:p-[18px] sm:p-[14px] xs:p-[14px]  relative">
@@ -30,7 +30,7 @@ const AboutUsSectionVideo = (props: Props) => {
         }}>
         <VideoPlayer
           customClass="border-gray_1 border-[2px] rounded-md shadow-lg shadow-gray_2 "
-          videoLink="/videos/audit.mp4"
+          videoLink={url}
         />
       </VideoModal>
     </div>

@@ -1,9 +1,9 @@
-import { UseVolumeReturn } from "@/hooks/hook";
-import { useState, MutableRefObject } from "react";
+import { useState, RefObject } from "react";
+import { UseVolumeReturn } from "../player";
 
 const useVolume = (
   initialVolume: number = 1,
-  videoRef: MutableRefObject<HTMLVideoElement | null>
+  videoRef: RefObject<HTMLVideoElement | null>
 ): UseVolumeReturn => {
   const [volume, setVolume] = useState<number>(initialVolume);
   const [isMuted, setIsMuted] = useState<boolean>(false);

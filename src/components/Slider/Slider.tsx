@@ -4,7 +4,7 @@ import React, { useMemo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Autoplay, Pagination } from "swiper/modules";
+// import { Autoplay, Pagination } from "swiper/modules";
 import useMediaQuery from "@/hooks/useMediaQuery";
 
 type SliderT<T> = {
@@ -35,7 +35,15 @@ export default function Slider<T>({
     if (isLarge) return slidePerViewLg || 3;
     if (isXLarge) return slidePerViewXl || 4;
     return 1;
-  }, [isSmall, isMedium, isLarge, isXLarge, slidePerViewMd, slidePerViewLg]);
+  }, [
+    isSmall,
+    isMedium,
+    isLarge,
+    isXLarge,
+    slidePerViewMd,
+    slidePerViewLg,
+    slidePerViewXl,
+  ]);
 
   return (
     <div className="relative">

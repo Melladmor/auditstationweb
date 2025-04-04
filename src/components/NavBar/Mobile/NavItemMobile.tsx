@@ -11,7 +11,6 @@ type Props = NavLinkI & {
 };
 
 const NavItemMobile = ({
-  id,
   title,
   isPage,
   url,

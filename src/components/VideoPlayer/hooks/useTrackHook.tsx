@@ -1,8 +1,8 @@
-import { useState, useEffect, MutableRefObject } from "react";
-import { UseTrackHookReturn } from "./hook";
+import { useState, useEffect, RefObject } from "react";
+import { UseTrackHookReturn } from "../player";
 
 export default function useTrackHook(
-  videoRef: MutableRefObject<HTMLVideoElement | null>
+  videoRef: RefObject<HTMLVideoElement | null>
 ): UseTrackHookReturn {
   const [currentTime, setCurrentTime] = useState<number>(0);
   const [duration, setDuration] = useState<number>(0);

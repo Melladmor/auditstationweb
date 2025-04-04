@@ -6,14 +6,7 @@ import { useTranslations } from "next-intl";
 
 type Props = PackagesI;
 
-const PackagesCard = ({
-  id,
-  description,
-  features,
-  name,
-  price,
-  color,
-}: Props) => {
+const PackagesCard = ({ description, features, name, price, color }: Props) => {
   const t = useTranslations();
 
   return (

@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { FaSortDown, FaSortUp, FaUpDown } from "react-icons/fa6";
+import { FaSortDown, FaSortUp } from "react-icons/fa6";
 
 type Props = {
   title: string;

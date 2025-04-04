@@ -1,5 +1,3 @@
-import { getTranslations } from "next-intl/server";
-
 import HeroSection from "@/components/HeroSection/HeroSection";
 import OurHappyCustomers from "@/components/sections/OurHappyCustomer/OurHappyCustomers";
 import AboutUsSection from "@/components/sections/AboutUs/AboutUsSection";
@@ -10,7 +8,6 @@ import TrainingPrograms from "@/components/sections/TrainingPrograms/TrainingPro
 import TaxStation from "@/components/sections/TaxStation/TaxStation";
 
 export default async function HomePage() {
-  const t = await getTranslations();
   return (
     <div>
       <HeroSection />

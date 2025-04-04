@@ -1,8 +1,6 @@
 import React from "react";
 
-type Props = {};
-
-const ComparePackages = (props: Props) => {
+const ComparePackages = () => {
   return (
     <table>
       <thead>

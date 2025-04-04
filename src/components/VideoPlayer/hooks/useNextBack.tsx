@@ -1,8 +1,8 @@
-import { MutableRefObject } from "react";
-import { useNextBackReturn } from "./hook";
+import { RefObject } from "react";
+import { useNextBackReturn } from "../player";
 
 const useNextBack = (
-  videoRef: MutableRefObject<HTMLVideoElement | null>
+  videoRef: RefObject<HTMLVideoElement | null>
 ): useNextBackReturn => {
   const handleBack = (): void => {
     if (videoRef.current) {
