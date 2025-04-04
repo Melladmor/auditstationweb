@@ -40,6 +40,11 @@
       "first": "Training",
       "second": "Programs",
       "subTitle": "Enhance your skills with our expert-led training programs designed to equip professionals with the latest knowledge in auditing, tax consultancy, and financial management."
+    },
+    "taxStation": {
+      "first": "Tax",
+      "second": "Station",
+      "subTitle": "We are one of the leading and most trusted accounting firms in the middle east. We redefine the industry by our auditing and accounting solutions designed specially to meet Your business needs. "
     }
   },
   "seemore": "See More",
@@ -51,5 +56,6 @@
   "features": "Features",
   "compare_packages": "Compare Packages",
   "visitaudit": "Visit Audit Station Platform",
-  "discovermore": "Discover More"
+  "discovermore": "Discover More",
+  "downloadapp": "Download App"
 }

@@ -3,4 +3,7 @@ export interface TitleI {
   second: string;
   subTitle?: sring;
   className?: string;
+  subTitleClass?: string;
+  firstClass?: string;
+  secondClass?: string;
 }

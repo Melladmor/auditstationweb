@@ -1,4 +1,5 @@
 import React from "react";
+import { twMerge } from "tailwind-merge";
 import { CustomSectionI } from "./type";
 import Title from "../Title/Title";
 
@@ -13,15 +14,16 @@ export default function CustomSection({
   return (
     <div
       id={id}
-      className={`px_padding flex flex-col gap-[32px] bg-light-bodyBg dark:bg-dark-bodyBg ${className}`}>
-      {title ? (
+      className={twMerge(
+        "px_padding flex flex-col gap-[32px] bg-light-bodyBg dark:bg-dark-bodyBg",
+        className
+      )}>
+      {title && (
         <Title
           first={title?.first}
           second={title?.second}
           subTitle={title?.subTitle}
         />
-      ) : (
-        ""
       )}
       <div>{children}</div>
     </div>
