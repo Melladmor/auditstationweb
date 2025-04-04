@@ -22,7 +22,10 @@ function Button({
   return (
     <div>
       {isLink && path ? (
-        <Link href={path} className={twMerge(baseStyles, className)}>
+        <Link
+          href={path}
+          target="_blank"
+          className={twMerge(baseStyles, className)}>
           <div className="flex items-center gap-2">
             {icon && <span>{icon}</span>}
             <p className="font-[700] text-[16px]">{title}</p>

@@ -17,7 +17,6 @@ export default async function HomePage() {
       <OurServicesSection />
       <PackagesSection />
       <OurPlatform />
-      <PackagesSection />
     </div>
   );
 }
