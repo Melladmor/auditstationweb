@@ -17,7 +17,7 @@ function OurHappyCustomresCard({
     window.open(cta, "_blank");
   };
   return (
-    <div className="xl:w-[411px] xl:h-[357px] lg:w-[411px] lg:h-[357px] md:w-[300px] md:h-auto sm:w-auto sm:h-auto xs:w-auto xs:h-auto xl:p-[24px] lg:p-[24px] md:p-[20px] sm:p-[16px] xs:p-[16px] rounded-[20px] bg-light-card dark:bg-dark-card dark:border-dark-border border-[1px]  shadow-light dark:shadow-dark flex flex-col items-center gap-[16px]">
+    <div className="xl:w-[411px] xl:h-[357px] lg:w-[411px] lg:h-[357px] md:w-[300px] md:h-auto sm:w-auto sm:h-auto xs:w-auto xs:h-auto xl:p-[24px] lg:p-[24px] md:p-[20px] sm:p-[16px] xs:p-[16px] rounded-[20px] bg-light-card dark:bg-dark-card dark:border-dark-border border-[1px]  xl:shadow-light lg:shadow-light md:shadow-light sm:shadow-none xs:shadow-none dark:shadow-dark flex flex-col items-center gap-[16px]">
       <div className="flex items-center justify-center w-full">
         <Image
           width={100}

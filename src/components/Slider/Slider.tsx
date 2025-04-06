@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useMemo } from "react";
+import React, { useMemo, useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/pagination";
-// import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css/navigation";
 import useMediaQuery from "@/hooks/useMediaQuery";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
 type SliderT<T> = {
   initialData: T[];
@@ -14,6 +15,7 @@ type SliderT<T> = {
   slidePerViewLg?: number;
   slidePerViewXl?: number;
   spaceBetween?: number;
+  nextAndPrev?: boolean;
 };
 
 export default function Slider<T>({
@@ -23,11 +25,21 @@ export default function Slider<T>({
   slidePerViewLg,
   slidePerViewXl,
   spaceBetween = 20,
+  nextAndPrev,
 }: SliderT<T>) {
   const isSmall = useMediaQuery("(max-width: 767px)");
   const isMedium = useMediaQuery("(min-width: 768px) and (max-width: 1023px)");
   const isLarge = useMediaQuery("(min-width: 1024px) and (max-width: 1124px)");
   const isXLarge = useMediaQuery("(min-width: 1125px)");
+
+  const [mounted, setMounted] = useState(false);
+
+  const prevRef = useRef<HTMLButtonElement>(null);
+  const nextRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const slidesPerView = useMemo(() => {
     if (isSmall) return 1;
@@ -45,14 +57,46 @@ export default function Slider<T>({
     slidePerViewXl,
   ]);
 
+  if (!mounted) return null;
+
   return (
     <div className="relative">
+      {nextAndPrev && !isSmall && (
+        <button
+          ref={prevRef}
+          className="absolute left-[-60px] top-1/2 z-10 -translate-y-1/2 bg-secondary hover:bg-dark-background dark:hover:bg-light-background hover:dark:text-light-text text-dark-text disabled:bg-gray-400 disabled:cursor-not-allowed size-[40px] flex justify-center items-center rounded-full">
+          <FaChevronLeft />
+        </button>
+      )}
+
+      {nextAndPrev && !isSmall && (
+        <button
+          ref={nextRef}
+          className="absolute right-[-60px] top-1/2 z-10 -translate-y-1/2 bg-secondary hover:bg-dark-background dark:hover:bg-light-background hover:dark:text-light-text text-dark-text disabled:cursor-not-allowed size-[40px] flex justify-center items-center rounded-full">
+          <FaChevronRight />
+        </button>
+      )}
+
       <Swiper
         slidesPerView={slidesPerView}
         spaceBetween={spaceBetween}
-        // modules={[Autoplay]}
-        // autoplay={{ delay: 3000, disableOnInteraction: false }}
-        pagination={{ clickable: true }}>
+        modules={[Navigation, Autoplay]}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: true,
+        }}
+        loop={isSmall}
+        navigation={{
+          prevEl: prevRef.current,
+          nextEl: nextRef.current,
+        }}
+        onBeforeInit={(swiper) => {
+          // Setup refs
+          // @ts-ignore
+          swiper.params.navigation.prevEl = prevRef.current;
+          // @ts-ignore
+          swiper.params.navigation.nextEl = nextRef.current;
+        }}>
         {initialData.map((item, index) => (
           <SwiperSlide key={index}>{renderItem(item)}</SwiperSlide>
         ))}
