@@ -2,7 +2,6 @@ import CustomSection from "@/components/CustomSection/CustomSection";
 import { getTranslations } from "next-intl/server";
 import React from "react";
 import { RewardCardsI } from "../RewardsProgram/RewardCards/type";
-import RewardCard from "../RewardsProgram/RewardCards/RewardCard";
 import OurTeamContainer from "./OurTeamContainer";
 
 const OurTeam = async () => {

@@ -2,6 +2,7 @@
 
 import React, { useMemo, useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper as SwiperType } from "swiper/types";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -81,21 +82,27 @@ export default function Slider<T>({
         slidesPerView={slidesPerView}
         spaceBetween={spaceBetween}
         modules={[Navigation, Autoplay]}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: true,
-        }}
+        autoplay={
+          isSmall
+            ? {
+                delay: 2500,
+                disableOnInteraction: true,
+              }
+            : undefined
+        }
         loop={isSmall}
         navigation={{
-          prevEl: prevRef.current,
-          nextEl: nextRef.current,
+          prevEl: prevRef.current!,
+          nextEl: nextRef.current!,
         }}
-        onBeforeInit={(swiper) => {
-          // Setup refs
-          // @ts-ignore
-          swiper.params.navigation.prevEl = prevRef.current;
-          // @ts-ignore
-          swiper.params.navigation.nextEl = nextRef.current;
+        onBeforeInit={(swiper: SwiperType) => {
+          if (
+            swiper.params.navigation &&
+            typeof swiper.params.navigation === "object"
+          ) {
+            swiper.params.navigation.prevEl = prevRef.current!;
+            swiper.params.navigation.nextEl = nextRef.current!;
+          }
         }}>
         {initialData.map((item, index) => (
           <SwiperSlide key={index}>{renderItem(item)}</SwiperSlide>
