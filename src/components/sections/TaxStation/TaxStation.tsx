@@ -41,7 +41,7 @@ const TaxStation = async () => {
         <div className="border-[4px] border-white dark:border-dark-border rounded-[20px]">
           <VideoPlayer
             videoLink={TaxStationData?.vedioLink}
-            customClass="max-h-[433px]"
+            customClass="max-h-[433px] rounded-[14px]"
           />
         </div>
       </div>
