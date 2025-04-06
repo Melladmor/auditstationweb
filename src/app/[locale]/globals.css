@@ -102,4 +102,17 @@
   .btn_size {
     @apply xl:h-[56px] lg:h-[56px] md:h-[45px] sm:h-[40px] xs:h-[40px] xl:min-w-[300px] lg:min-w-[300px] md:min-w-[250px] sm:min-w-[200px] xs:min-w-[225px];
   }
+  .custom_progress::-webkit-progress-bar {
+    @apply bg-black/10 rounded-full;
+  }
+
+  .custom_progress::-webkit-progress-value {
+    background-color: #ff7701;
+    border-radius: 9999px;
+  }
+
+  .custom_progress::-moz-progress-bar {
+    background-color: #ff7701;
+    border-radius: 9999px;
+  }
 }

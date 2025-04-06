@@ -45,6 +45,11 @@
       "first": "Tax",
       "second": "Station",
       "subTitle": "We are one of the leading and most trusted accounting firms in the middle east. We redefine the industry by our auditing and accounting solutions designed specially to meet Your business needs. "
+    },
+    "rewardsprogram": {
+      "first": "Rewards",
+      "second": "Program",
+      "subTitle": "We created a reward program for all of our clients in order to show how much we appreciate them."
     }
   },
   "seemore": "See More",
@@ -57,5 +62,6 @@
   "compare_packages": "Compare Packages",
   "visitaudit": "Visit Audit Station Platform",
   "discovermore": "Discover More",
-  "downloadapp": "Download App"
+  "downloadapp": "Download App",
+  "points": "Points"
 }
