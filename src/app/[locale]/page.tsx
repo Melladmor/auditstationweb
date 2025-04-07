@@ -10,6 +10,9 @@ import RewardsProgram from "@/components/sections/RewardsProgram/RewardsProgram"
 import OurTeam from "@/components/sections/OurTeam/OurTeam";
 import News from "@/components/sections/News/News";
 import GoogleReviews from "@/components/sections/GoogleReviews/GoogleReviews";
+import Input from "@/components/Inputs/Text";
+import Password from "@/components/Inputs/Password";
+import Phone from "@/components/Inputs/Phone";
 
 export default async function HomePage() {
   return (

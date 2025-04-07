@@ -33,6 +33,10 @@
   padding-top: 20px;
   box-sizing: border-box;
 }
+/* .flag {
+  width: 18px !important;
+  height: 18px !important;
+} */
 @layer components {
   .px_padding {
     @apply xl:px-[80px] lg:px-[50px] md:px-[60px] sm:px-[40px] xs:px-[20px];

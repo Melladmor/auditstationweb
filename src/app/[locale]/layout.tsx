@@ -7,7 +7,7 @@ import { Locale, routing } from "@/i18n/routing";
 import Header from "@/components/NavBar/Header";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
-
+import "react-phone-input-2/lib/style.css";
 const poppins = Poppins({
   weight: "400",
   subsets: ["latin"],
