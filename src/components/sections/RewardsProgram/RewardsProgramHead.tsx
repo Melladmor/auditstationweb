@@ -30,7 +30,7 @@ const RewardsProgramHead = async ({ data }: Props) => {
           />
         </div>
       </div>
-      <div className="xl:h-[90%] lg:h-[90%] md:h-[90%] sm:h-full xs:h-full xl:w-[50%] lg:w-[50%] md:w-[50%] sm:w-full xs:w-full bg-[#D8F0C4]  border-[#ECF8E3] border xl:absolute lg:absolute md:absolute sm:block xs:block top-[5%] right-0 p-[24px]">
+      <div className="xl:h-[90%] lg:h-[90%] md:h-[90%] sm:h-full xs:h-full xl:w-[50%] lg:w-[50%] md:w-[50%] sm:w-full xs:w-full bg-[#D8F0C4]  border-[#ECF8E3] border xl:absolute lg:absolute md:absolute sm:block xs:block top-[5%] ltr:right-0 rtl:left-0 p-[24px]">
         <div className="flex flex-col gap-4 justify-center text-center">
           <h3 className="xl:text-[24px] lg:text-[18px] md:text-[14px] sm:text-[16px] xs:text-[16px] text-black font-[600]">
             {data?.points?.title}

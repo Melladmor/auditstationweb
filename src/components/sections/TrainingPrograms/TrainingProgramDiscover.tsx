@@ -32,8 +32,8 @@ const TrainingProgramDiscover = async ({
         />
       </div>
       <div className="h-full w-full relative">
-        <div className="w-[90%] h-[90%] bg-[#FFEBD9] absolute right-0 bottom-0 xl:block lg:block md:block sm:hidden xs:hidden"></div>
-        <div className=" xl:absolute lg:absolute md:absolute top-0 left-0 xl:w-[90%] lg:w-[90%] md:w-[90%] sm:w-full xs:w-full xl:h-[90%] lg:h-[90%] md:h-[90%] sm:h-full xs:h-full shadow-light">
+        <div className="w-[90%] h-[90%] bg-[#FFEBD9] absolute ltr:right-0 rtl:left-0 bottom-0 xl:block lg:block md:block sm:hidden xs:hidden"></div>
+        <div className=" xl:absolute lg:absolute md:absolute top-0 ltr:left-0 rtl:right-0 xl:w-[90%] lg:w-[90%] md:w-[90%] sm:w-full xs:w-full xl:h-[90%] lg:h-[90%] md:h-[90%] sm:h-full xs:h-full shadow-light">
           <VideoPlayer videoLink={videoLink} />
         </div>
       </div>

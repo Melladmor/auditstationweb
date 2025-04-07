@@ -24,7 +24,6 @@ export default async function HomePage() {
       <RewardsProgram />
       <OurTeam />
       <News />
-      <OurTeam />
     </div>
   );
 }
