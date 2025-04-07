@@ -2,7 +2,6 @@ import CustomSection from "@/components/CustomSection/CustomSection";
 import { getTranslations } from "next-intl/server";
 import React from "react";
 import { NewsI } from "./type";
-import NewsCard from "./NewsCard";
 import { NewsContainer } from "./NewsContainer";
 
 type Props = {};
