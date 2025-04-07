@@ -4,9 +4,7 @@ import React from "react";
 import { NewsI } from "./type";
 import { NewsContainer } from "./NewsContainer";
 
-type Props = {};
-
-const News = async (props: Props) => {
+const News = async () => {
   const t = await getTranslations("sections.news");
   const newsData: NewsI[] = [
     {
