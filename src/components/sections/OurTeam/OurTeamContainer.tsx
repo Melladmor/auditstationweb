@@ -16,7 +16,6 @@ const OurTeamContainer = ({ data }: Props) => {
         slidePerViewXl={3}
         slidePerViewLg={2}
         slidePerViewMd={1}
-        // spaceBetween={100}
         nextAndPrev
         renderItem={(link) => {
           return (

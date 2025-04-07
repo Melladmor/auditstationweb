@@ -9,6 +9,7 @@ import TaxStation from "@/components/sections/TaxStation/TaxStation";
 import RewardsProgram from "@/components/sections/RewardsProgram/RewardsProgram";
 import OurTeam from "@/components/sections/OurTeam/OurTeam";
 import News from "@/components/sections/News/News";
+import GoogleReviews from "@/components/sections/GoogleReviews/GoogleReviews";
 
 export default async function HomePage() {
   return (
@@ -24,6 +25,7 @@ export default async function HomePage() {
       <RewardsProgram />
       <OurTeam />
       <News />
+      <GoogleReviews />
     </div>
   );
 }

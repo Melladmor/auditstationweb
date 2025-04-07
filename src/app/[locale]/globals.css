@@ -28,7 +28,11 @@
 [dir="rtl"] .cta_rouned {
   border-radius: 40px 40px 0px 40px;
 }
-
+.swiper-slide {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
 @layer components {
   .px_padding {
     @apply xl:px-[80px] lg:px-[50px] md:px-[60px] sm:px-[40px] xs:px-[20px];
