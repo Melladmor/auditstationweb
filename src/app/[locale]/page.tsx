@@ -8,6 +8,7 @@ import TrainingPrograms from "@/components/sections/TrainingPrograms/TrainingPro
 import TaxStation from "@/components/sections/TaxStation/TaxStation";
 import RewardsProgram from "@/components/sections/RewardsProgram/RewardsProgram";
 import OurTeam from "@/components/sections/OurTeam/OurTeam";
+import News from "@/components/sections/News/News";
 
 export default async function HomePage() {
   return (
@@ -21,6 +22,8 @@ export default async function HomePage() {
       <TrainingPrograms />
       <TaxStation />
       <RewardsProgram />
+      <OurTeam />
+      <News />
       <OurTeam />
     </div>
   );
