@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import PhoneInput, { CountryData } from "react-phone-input-2";
+import { PhoneInput } from "react-international-phone";
 import { InputPropsI } from "../type";
 
 const Phone: React.FC<
@@ -21,17 +21,12 @@ const Phone: React.FC<
   value,
   onChange,
 }) => {
-  const handleChange = (phone: string, country: CountryData) => {
-    const cleanedPhone = phone.startsWith(country.dialCode)
-      ? phone
-      : `${country.dialCode}${phone.replace(/^0+/, "")}`;
-    const fullValue = `+${cleanedPhone}`;
+  const handleChange = (phone: string) => {
     if (onChange) {
-      onChange?.(fullValue);
+      onChange?.(phone);
     }
-
     if (register) {
-      register.onChange({ target: { value: fullValue } });
+      register.onChange({ target: { value: phone } });
     }
   };
 
@@ -45,7 +40,7 @@ const Phone: React.FC<
       )}
       <div className="flex w-full items-center">
         {icon && (
-          <div className="xl:w-[64px] lg:w-[64px] md:w-[54px] sm:w-[44px] xs:w-[44px] xl:p-[16px] lg:p-[16px] md:p-[10px] sm:p-[11px] xs:p-[11px] xl:h-[56px] lg:h-[56px] md:h-[40px] sm:h-[40px] bg-secondary flex justify-center items-center rounded-[8px_0px_0px_8px]">
+          <div className="xl:w-[64px] lg:w-[64px] md:w-[54px] sm:w-[44px] xs:w-[44px]  xl:h-[56px] lg:h-[56px] md:h-[40px] sm:h-[40px] bg-secondary flex justify-center items-center ltr:rounded-[8px_0px_0px_8px] rtl:rounded-[0px_8px_8px_0px]">
             <Image
               src={icon}
               alt="icon"
@@ -55,19 +50,12 @@ const Phone: React.FC<
             />
           </div>
         )}
-        <div className="flex-1 flex flex-col gap-1">
-          <PhoneInput
-            country="ae"
-            value={value}
-            onChange={handleChange}
-            inputClass="!w-full  xl:!h-[56px] lg:!h-[56px] md:!h-[40px] sm:!h-[40px] xs:!h-[40px] !rounded-[8px] !bg-[#e9f8e7] !text-sm !border-none !pl-[58px]  focus:!outline-none"
-            buttonClass="!bg-[#e9f8e7] !border-none !rounded-full"
-            containerClass={`!bg-[#e9f8e7] ${
-              error ? "!border !border-red-500" : ""
-            }`}
-            disabled={disabled}
-          />
-        </div>
+        <PhoneInput
+          defaultCountry="ae"
+          value={value}
+          onChange={(value: string) => handleChange(value)}
+          disabled={disabled}
+        />
       </div>
       {error && <p className="text-sm text-red-500 mt-2">{error}</p>}
     </div>

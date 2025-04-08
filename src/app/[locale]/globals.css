@@ -33,16 +33,26 @@
   padding-top: 20px;
   box-sizing: border-box;
 }
-/* .flag {
-  width: 18px !important;
-  height: 18px !important;
-} */
+.react-international-phone-input-container {
+  @apply xl:h-[56px] lg:h-[56px] md:h-[40px] sm:h-[40px] xs:h-[40px] !w-full !flex-1 ltr:!rounded-[0px_8px_8px_0px] rtl:!rounded-[8px_0px_0px_8px];
+}
+[dir="rtl"] .react-international-phone-country-selector-dropdown {
+  @apply !right-0;
+}
+.react-international-phone-country-selector {
+  @apply xl:h-[56px] lg:h-[56px] md:h-[40px] sm:h-[40px] xs:h-[40px]  !rounded-none;
+}
+.react-international-phone-country-selector-button {
+  @apply xl:!h-[56px] lg:!h-[56px] md:!h-[40px] sm:!h-[40px] xs:!h-[40px] !bg-[rgba(255,255,255,0.64)]  !rounded-none;
+}
+.react-international-phone-input {
+  @apply xl:!h-[56px] lg:!h-[56px] md:!h-[40px] sm:!h-[40px] xs:!h-[40px] !w-full !flex-1 !bg-[rgba(255,255,255,0.64)]  !text-[#757575] ltr:!rounded-[0px_8px_8px_0px] rtl:!rounded-[8px_0px_0px_8px];
+}
 @layer components {
   .px_padding {
     @apply xl:px-[80px] lg:px-[50px] md:px-[60px] sm:px-[40px] xs:px-[20px];
   }
 
-  /* undeline for the links in the navbar */
   .subservicesLinks {
     @apply relative inline-block cursor-pointer;
   }

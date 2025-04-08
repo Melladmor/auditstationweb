@@ -11,7 +11,7 @@ import TextArea from "@/components/Inputs/Inputs/TextArea";
 import Phone from "@/components/Inputs/Inputs/Phone";
 import Button from "@/components/Buttons/Button";
 
-const createFormSchema = (t: any) => {
+const createFormSchema = (t: ReturnType<typeof useTranslations>) => {
   return z.object({
     firstname: z
       .string()
@@ -57,7 +57,7 @@ const CallBackForm = () => {
   };
 
   return (
-    <div className="bg-[#D8F0C4] xl:w-[95%] lg:w-[95%] md:w-[95%] sm:w-full xs:w-full  absolute top-[5%] ltr:left-0 xl:rounded-[0px_150px_0px_150px] lg:rounded-[0px_150px_0px_150px] md:rounded-[0px_100px_0px_100px] sm:rounded-lg xs:rounded-lg xl:p-[50px] lg:p-[50px] md:p-[30px] sm:p-[20px] xs:p-[20px]">
+    <div className="bg-[#D8F0C4] xl:w-[95%] lg:w-[95%] md:w-[95%] sm:w-full xs:w-full  absolute top-[5%] ltr:left-0 rtl:right-0 ltr:xl:rounded-[0px_150px_0px_150px] ltr:lg:rounded-[150px_0px_150px_0px] rtl:md:rounded-[100px_0px_100px_0px] rtl:xl:rounded-[150px_0px_150px_0px] rtl:lg:rounded-[0px_150px_0px_150px] ltr:md:rounded-[0px_100px_0px_100px] sm:rounded-lg xs:rounded-lg xl:p-[50px] lg:p-[50px] md:p-[30px] sm:p-[20px] xs:p-[20px]">
       <div className="flex justify-center items-center w-full mb-[16px]">
         <h2 className="xl:text-[32px] lg:text-[28px] md:text-[26px] sm:text-[20px] xs:text-[20px] text-black font-[500]">
           {t("getintouch")}

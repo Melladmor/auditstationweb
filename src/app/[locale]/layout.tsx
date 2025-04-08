@@ -8,6 +8,8 @@ import Header from "@/components/NavBar/Header";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import "react-phone-input-2/lib/style.css";
+import "react-international-phone/style.css";
+import Footer from "@/components/Footer/Footer";
 const poppins = Poppins({
   weight: "400",
   subsets: ["latin"],
@@ -46,6 +48,7 @@ export default async function LocaleLayout({
             <div className="bg-light-bodyBg dark:bg-dark-bodyBg">
               {children}
             </div>
+            <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
