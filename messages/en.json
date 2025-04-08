@@ -65,7 +65,21 @@
       "first": "Google",
       "second": "Reviews",
       "subTitle": "Discover why businesses trust Audit Station! See real feedback from our satisfied clients who rely on our expertise in auditing, tax consultancy, and financial services."
+    },
+    "callback": {
+      "first": "Request",
+      "second": "a Call Back",
+      "subTitle": "Have questions or need expert financial guidance? Our team is here to help! Contact us today for professional auditing, tax consultancy, and business advisory services."
     }
+  },
+  "validations": {
+    "firstname_required": "First name is required",
+    "lastname_required": "Last name is required",
+    "email_invalid": "Invalid email address",
+    "phone_required": "Phone number is required",
+    "company_required": "Company name is required",
+    "message_required": "Message is required",
+    "phone_invalid_length": "Phone number should be at least 7 digits (excluding country code)"
   },
   "seemore": "See More",
   "readmore": "Read More",
@@ -80,5 +94,13 @@
   "downloadapp": "Download App",
   "points": "Points",
   "minread": "Min Read",
-  "addreview":"Add Review"
+  "addreview": "Add Review",
+  "getintouch": "Get in Touch with Us",
+  "firstname": "First Name",
+  "lastname": "Last Name",
+  "email": "Email",
+  "phonenumber": "Phone Number",
+  "companyname": "Company Name",
+  "yourmessage": "Your Message",
+  "submit": "Submit"
 }

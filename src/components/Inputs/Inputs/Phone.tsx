@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
-import { InputPropsI } from "./type";
 import Image from "next/image";
 import PhoneInput, { CountryData } from "react-phone-input-2";
+import { InputPropsI } from "../type";
 
 const Phone: React.FC<
-  Omit<InputPropsI, "placeholder" | "type"> & {
+  Omit<InputPropsI, "placeholder" | "type" | "name"> & {
     value?: string;
     onChange?: (value: string) => void;
   }
@@ -30,7 +30,7 @@ const Phone: React.FC<
       onChange?.(fullValue);
     }
 
-    if (register?.onChange) {
+    if (register) {
       register.onChange({ target: { value: fullValue } });
     }
   };
@@ -45,13 +45,13 @@ const Phone: React.FC<
       )}
       <div className="flex w-full items-center">
         {icon && (
-          <div className="w-[64px] p-[16px] h-[56px] bg-secondary flex justify-center items-center rounded-[8px_0px_0px_8px]">
+          <div className="xl:w-[64px] lg:w-[64px] md:w-[54px] sm:w-[44px] xs:w-[44px] xl:p-[16px] lg:p-[16px] md:p-[10px] sm:p-[11px] xs:p-[11px] xl:h-[56px] lg:h-[56px] md:h-[40px] sm:h-[40px] bg-secondary flex justify-center items-center rounded-[8px_0px_0px_8px]">
             <Image
               src={icon}
               alt="icon"
               width={100}
               height={100}
-              className="size-[24px]"
+              className="xl:size-[24px] lg:size-[24px] md:size-[22px] sm:size-[18px] xs:size-[18px]"
             />
           </div>
         )}
@@ -60,16 +60,16 @@ const Phone: React.FC<
             country="ae"
             value={value}
             onChange={handleChange}
-            inputClass="!w-full !h-[56px] !rounded-[8px] !bg-[#e9f8e7] !text-sm !border-none !pl-[58px] focus:!outline-none"
+            inputClass="!w-full  xl:!h-[56px] lg:!h-[56px] md:!h-[40px] sm:!h-[40px] xs:!h-[40px] !rounded-[8px] !bg-[#e9f8e7] !text-sm !border-none !pl-[58px]  focus:!outline-none"
             buttonClass="!bg-[#e9f8e7] !border-none !rounded-full"
             containerClass={`!bg-[#e9f8e7] ${
               error ? "!border !border-red-500" : ""
             }`}
             disabled={disabled}
           />
-          {error && <p className="text-sm text-red-500">{error}</p>}
         </div>
       </div>
+      {error && <p className="text-sm text-red-500 mt-2">{error}</p>}
     </div>
   );
 };

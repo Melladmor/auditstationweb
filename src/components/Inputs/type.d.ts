@@ -10,4 +10,5 @@ export interface InputPropsI {
   register?: UseFormRegisterReturn;
   error?: string;
   icon?: string;
+  name: string;
 }
