@@ -12,10 +12,11 @@ const CallBack = async () => {
         second: t("second"),
         subTitle: t("subTitle"),
       }}
-      className="mt-[100px]">
+      className="mt-[100px]"
+      id="contactus">
       <div className="h-[940px] relative">
         <div
-          className="xl:w-[90%] lg:w-[90%] md:w-[90%] sm:w-full xs:w-full h-[90%] absolute ltr:right-0 rtl:left-0 top-0"
+          className="xl:w-[90%] lg:w-[90%] md:w-[90%] xl:block lg:block md:block sm:w-full xs:w-full sm:hidden xs:hidden h-[90%] absolute ltr:right-0 rtl:left-0 top-0"
           style={{
             backgroundImage:
               "linear-gradient(134deg, #FF7701 -0.03%, rgba(9, 18, 25, 0.92) 74.54%)",

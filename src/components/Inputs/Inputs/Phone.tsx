@@ -33,14 +33,14 @@ const Phone: React.FC<
   return (
     <div className={`w-full ${className}`}>
       {label && (
-        <label className="text-[#091219] dark:text-dark-text text-[14px] font-medium mb-2 block">
+        <label className="text-[#091219]  text-[14px] font-medium mb-2 block">
           {label}
           {required && <span className="text-red-500 ml-1">*</span>}
         </label>
       )}
       <div className="flex w-full items-center">
         {icon && (
-          <div className="xl:w-[64px] lg:w-[64px] md:w-[54px] sm:w-[44px] xs:w-[44px]  xl:h-[56px] lg:h-[56px] md:h-[40px] sm:h-[40px] bg-secondary flex justify-center items-center ltr:rounded-[8px_0px_0px_8px] rtl:rounded-[0px_8px_8px_0px]">
+          <div className="xl:w-[64px] lg:w-[64px] md:w-[54px] sm:w-[44px] xs:w-[44px]  xl:h-[56px] lg:h-[56px] md:h-[40px] sm:h-[40px] xs:h-[40px] bg-secondary flex justify-center items-center ltr:rounded-[8px_0px_0px_8px] rtl:rounded-[0px_8px_8px_0px]">
             <Image
               src={icon}
               alt="icon"

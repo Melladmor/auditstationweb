@@ -1,5 +1,6 @@
 {
   "navbarlinks": {
+    "home": "الرئيسية",
     "aboutus": "من نحن",
     "services": {
       "services": "الخدمات",
@@ -9,7 +10,16 @@
     "platform": "المنصة",
     "training": "التدريب",
     "news": "الأخبار",
-    "contactus": "اتصل بنا"
+    "contactus": "تواصل معنا",
+    "signup": "إنشاء حساب",
+    "signin": "تسجيل الدخول",
+    "customers": "العملاء",
+    "our_team": "فريق العمل",
+    "join_rewards_program": "انضم إلى برنامج المكافآت",
+    "add_review": "أضف تقييمك",
+    "career": "الوظائف",
+    "terms_conditions": "الشروط والأحكام",
+    "privacy_policy": "سياسة الخصوصية"
   },
   "sections": {
     "ourhappycustomers": {
@@ -103,5 +113,10 @@
   "phonenumber": "رقم الهاتف",
   "companyname": "اسم الشركة",
   "yourmessage": "رسالتك",
-  "submit": "إرسال"
+  "submit": "إرسال",
+  "mainaddress": "الإمارات: 1906، برج غروسفينور بيزنس باي، الخليج التجاري، دبي.",
+  "omanaddress": "عُمان: 12، مبنى أوريدو، شارع الخوض التجاري، الخوض، مسقط.",
+  "quicklinks": "روابط سريعة",
+  "followusonsocial": "تابعنا على وسائل التواصل",
+  "copyright": "© حقوق النشر - محطة التدقيق"
 }

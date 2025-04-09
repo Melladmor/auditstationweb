@@ -107,7 +107,8 @@ const OurTeam = async () => {
         second: t("second"),
         subTitle: t("subTitle"),
       }}
-      className="mt-[100px]">
+      className="mt-[100px]"
+      id="ourteam">
       <OurTeamContainer data={ourTeamData} />
     </CustomSection>
   );

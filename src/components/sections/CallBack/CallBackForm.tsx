@@ -121,7 +121,10 @@ const CallBackForm = () => {
           error={errors.message?.message}
         />
         <div className="flex justify-end items-center-end w-full">
-          <Button title={t("submit")} className="btn_size" />
+          <Button
+            title={t("submit")}
+            className="btn_size !bg-black !text-white hover:!bg-secondary"
+          />
         </div>
       </form>
     </div>

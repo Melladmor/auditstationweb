@@ -22,7 +22,7 @@ const Password: React.FC<Props> = ({
   return (
     <div className={`w-full ${className}`}>
       {label && (
-        <label className="text-[#091219] dark:text-dark-text text-[14px] font-medium mb-2 block">
+        <label className="text-[#091219]  text-[14px] font-medium mb-2 block">
           {label}
           {required && <span className="text-red-500 ml-1">*</span>}
         </label>

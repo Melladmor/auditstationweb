@@ -1,10 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+* {
+  scroll-behavior: smooth;
+}
 .theme-switch {
   position: relative;
-
   background-image: url("/images/switch.png");
   background-size: contain;
 

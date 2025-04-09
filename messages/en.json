@@ -1,5 +1,6 @@
 {
   "navbarlinks": {
+    "home": "Home",
     "aboutus": "About Us",
     "services": {
       "services": "Services",
@@ -9,7 +10,16 @@
     "platform": "Platform",
     "training": "Training",
     "news": "News",
-    "contactus": "Contact Us"
+    "contactus": "Contact Us",
+    "signup": "Sign Up",
+    "signin": "Sign In",
+    "customers": "Customers",
+    "our_team": "Our Team",
+    "join_rewards_program": "Join Our Rewards Program",
+    "add_review": "Add Review",
+    "career": "Career",
+    "terms_conditions": "Terms & Conditions",
+    "privacy_policy": "Privacy Policy"
   },
   "sections": {
     "ourhappycustomers": {
@@ -102,5 +112,10 @@
   "phonenumber": "Phone Number",
   "companyname": "Company Name",
   "yourmessage": "Your Message",
-  "submit": "Submit"
+  "submit": "Submit",
+  "mainaddress": "UAE: 1906, Grosvenor Business Bay Tower,Business Bay, Dubai.",
+  "omanaddress": "Oman: 12, Ooredoo building, Alkhoud A'tijari street Al khoud, Muscat.",
+  "quicklinks": "Quick Links",
+  "followusonsocial": "Follow Us On Social Media",
+  "copyright": "© Copyright - Auditstation."
 }
