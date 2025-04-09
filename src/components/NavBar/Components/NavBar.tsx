@@ -16,7 +16,7 @@ const NavBar = ({ linksData }: Props) => {
   const pathname = usePathname();
   const splitedPathName = pathname.slice(`/${locale}`.length);
   return (
-    <div className="navbar-center hidden lg:flex gap-4">
+    <div className="navbar-center hidden lg:flex gap-4 ">
       <li
         className={`links py-2 xl:text-[20px] lg:text-[16px] ${
           splitedPathName === "" ? "text-secondary" : "text-white"
