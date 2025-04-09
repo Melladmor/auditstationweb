@@ -45,7 +45,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider attribute="class">
             <Header />
-            <div className="bg-light-bodyBg dark:bg-dark-bodyBg pb-[100px]">
+            <div className="bg-light-bodyBg dark:bg-dark-bodyBg xl:pb-[250px] lg:pb-[200px] md:pb-[100px] ">
               {children}
             </div>
             <Footer />

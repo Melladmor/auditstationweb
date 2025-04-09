@@ -48,6 +48,7 @@ const CallBackForm = () => {
     handleSubmit,
     setValue,
     formState: { errors },
+    trigger,
   } = useForm<FormSchemaType>({
     resolver: zodResolver(formSchema),
   });
@@ -99,7 +100,13 @@ const CallBackForm = () => {
           label={t("phonenumber")}
           required
           register={register("phone")}
-          onChange={(e) => setValue("phone", e, { shouldValidate: true })}
+          onChange={(e) => {
+            setValue("phone", e, {
+              shouldDirty: true,
+              shouldTouch: true,
+            });
+            trigger("phone"); // 🔥 triggers validation manually
+          }}
           error={errors.phone?.message}
         />
         <TextInput
