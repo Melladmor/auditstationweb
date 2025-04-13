@@ -1,8 +1,9 @@
 import React from "react";
 import { ParamsIdT } from "../../type";
 
-const page = ({ params }: ParamsIdT<"newsId">) => {
-  return <div>News {params?.newsId}</div>;
+const page = async ({ params }: ParamsIdT<"newsId">) => {
+  const { newsId } = await params;
+  return <div>News {newsId}</div>;
 };
 
 export default page;

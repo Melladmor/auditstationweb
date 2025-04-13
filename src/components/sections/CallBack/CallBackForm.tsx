@@ -46,9 +46,7 @@ const CallBackForm = () => {
   const {
     register,
     handleSubmit,
-    setValue,
     formState: { errors },
-    trigger,
   } = useForm<FormSchemaType>({
     resolver: zodResolver(formSchema),
   });
