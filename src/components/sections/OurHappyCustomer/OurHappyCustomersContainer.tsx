@@ -25,7 +25,8 @@ export function OurHappyCustomersContainer({ data }: Props) {
         <Button
           title={t("seemore")}
           isLink
-          path="ourhappycustomers"
+          not_blank
+          path="our-happy-customers"
           className="btn_size"
         />
       </div>

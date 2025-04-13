@@ -229,8 +229,9 @@ const OurServicesSection = async () => {
         <Button
           title={btnTitle("seemore")}
           isLink
-          path="/packages"
+          path="/services"
           className="btn_size"
+          not_blank
         />
       </div>
     </CustomSection>

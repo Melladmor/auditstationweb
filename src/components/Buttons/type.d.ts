@@ -6,4 +6,5 @@ export interface ButtonI {
   isLink?: bollean;
   path?: string;
   onClick?: () => void;
+  not_blank?: boolean;
 }

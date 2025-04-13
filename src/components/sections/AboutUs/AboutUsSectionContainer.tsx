@@ -27,6 +27,7 @@ const AboutUsSectionContainer = async ({
           isLink
           className="btn_size"
           path="aboutus"
+          not_blank
         />
       </div>
       <AboutUsSectionVideo url="/videos/audit.mp4" />

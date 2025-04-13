@@ -52,7 +52,7 @@ const FooterAddress = async () => {
     {
       id: 2,
       icon: "/icons/inputicons/phone.svg",
-      title: "+971 5 8602 8902",
+      title: "+971 58 602 8902",
       className: "items-center",
       path: "https://wa.me/971586028902",
     },
@@ -65,7 +65,7 @@ const FooterAddress = async () => {
     {
       id: 4,
       icon: "/icons/inputicons/phone.svg",
-      title: "+968 9674 0002",
+      title: "+968 96 740 002",
       className: "items-center",
       path: "https://wa.me/96896740002",
     },

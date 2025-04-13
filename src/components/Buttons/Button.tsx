@@ -13,6 +13,7 @@ function Button({
   isLoading,
   isLink,
   path,
+  not_blank,
 }: Props) {
   const baseStyles = `px-[10px] py-[10px] rounded-[8px] bg-dark-background 
     dark:bg-light-bodyBg text-white hover:bg-secondary dark:hover:bg-secondary hover:dark:text-white 
@@ -24,7 +25,7 @@ function Button({
       {isLink && path ? (
         <Link
           href={path}
-          target="_blank"
+          target={not_blank ? "_self" : "_blank"}
           className={twMerge(baseStyles, className)}>
           <div className="flex items-center gap-2">
             {icon && <span>{icon}</span>}

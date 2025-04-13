@@ -34,7 +34,8 @@ const TaxStation = async () => {
           <Button
             title={btnTitle("discovermore")}
             isLink
-            path="taxstation"
+            not_blank
+            path="tax-station"
             className="btn_size bg-light-bodyBg text-light-text dark:bg-dark-background dark:text-dark-text hover:text-white"
           />
         </div>

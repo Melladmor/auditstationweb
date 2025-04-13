@@ -19,7 +19,7 @@ const FooterLinks = async () => {
     {
       id: 3,
       title: t("services.packages"),
-      path: "packages",
+      path: "#packages",
     },
     {
       id: 4,
@@ -29,12 +29,12 @@ const FooterLinks = async () => {
     {
       id: 5,
       title: t("platform"),
-      path: "platform",
+      path: "our-platform",
     },
     {
       id: 6,
       title: t("training"),
-      path: "training",
+      path: "our-training-programs",
     },
     {
       id: 7,
@@ -59,7 +59,7 @@ const FooterLinks = async () => {
     {
       id: 11,
       title: t("customers"),
-      path: "customers",
+      path: "our-happy-customers",
     },
     {
       id: 12,

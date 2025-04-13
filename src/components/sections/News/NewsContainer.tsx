@@ -27,6 +27,7 @@ export function NewsContainer({ data }: Props) {
           isLink
           path="news"
           className="btn_size"
+          not_blank
         />
       </div>
     </div>

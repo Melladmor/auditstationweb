@@ -25,7 +25,6 @@ const OurHappyCustomers = async () => {
           name: "Subcategory",
         },
       ],
-      cta: "www.google.com",
     },
     {
       id: 2,
@@ -43,7 +42,6 @@ const OurHappyCustomers = async () => {
           name: "Subcategory",
         },
       ],
-      cta: "www.google.com",
     },
     {
       id: 3,
@@ -61,7 +59,6 @@ const OurHappyCustomers = async () => {
           name: "Subcategory",
         },
       ],
-      cta: "www.google.com",
     },
     {
       id: 4,
@@ -79,7 +76,6 @@ const OurHappyCustomers = async () => {
           name: "Subcategory",
         },
       ],
-      cta: "www.google.com",
     },
   ];
 

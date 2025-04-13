@@ -41,7 +41,8 @@ const OurPlatform = async () => {
         <Button
           title={btnTitle("discovermore")}
           isLink
-          path="ourplatform"
+          not_blank
+          path="our-platform"
           className="btn_size"
         />
       </div>

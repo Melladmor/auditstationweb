@@ -181,7 +181,8 @@ const PackagesSection = async () => {
         second: t("second"),
         subTitle: t("subTitle"),
       }}
-      className="mt-[100px]">
+      className="mt-[100px]"
+      id="packages">
       <PackagesContainer data={packagesData} />
 
       <div className="mt-[32px]">

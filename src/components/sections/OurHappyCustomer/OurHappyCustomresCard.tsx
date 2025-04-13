@@ -3,19 +3,17 @@ import React from "react";
 import { CategoryT, OurHappyCustomersI } from "./type";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
+import Link from "next/link";
 
 type Props = OurHappyCustomersI;
 
 function OurHappyCustomresCard({
+  id,
   category,
   description,
   logo,
   title,
-  cta,
 }: Props) {
-  const handleNavigate = () => {
-    window.open(cta, "_blank");
-  };
   return (
     <div className="xl:w-[411px] xl:h-[357px] lg:w-[411px] lg:h-[357px] md:w-[300px] md:h-auto sm:w-auto sm:h-auto xs:w-auto xs:h-auto xl:p-[24px] lg:p-[24px] md:p-[20px] sm:p-[16px] xs:p-[16px] rounded-[20px] bg-light-card dark:bg-dark-card dark:border-dark-border border-[1px]  xl:shadow-light lg:shadow-light md:shadow-light sm:shadow-none xs:shadow-none dark:shadow-dark flex flex-col items-center gap-[16px]">
       <div className="flex items-center justify-center w-full">
@@ -48,11 +46,11 @@ function OurHappyCustomresCard({
         {description}
       </p>
       <div className="flex items-center justify-end w-full">
-        <div
-          onClick={handleNavigate}
+        <Link
+          href={`our-happy-customers/${id}`}
           className="xl:w-[40px] xl:h-[40px] lg:w-[40px] lg:h-[40px] md:w-[35px] md:h-[35px] sm:w-[25px] sm:h-[25px] xs:w-[25px] xs:h-[25px] cursor-pointer flex items-center justify-center rounded-full bg-secondary">
           <FaArrowRight className="xl:size-4 lg:size-4 md:size-4 sm:size-3 xs:size-3 text-white" />
-        </div>
+        </Link>
       </div>
     </div>
   );

@@ -25,7 +25,8 @@ const RewardsProgramHead = async ({ data }: Props) => {
           <Button
             title={t("seemore")}
             isLink
-            path="rewardsprogram"
+            not_blank
+            path="rewards-program"
             className="btn_size w-[50%] dark:bg-secondary dark:text-dark-text dark:hover:bg-dark-background"
           />
         </div>

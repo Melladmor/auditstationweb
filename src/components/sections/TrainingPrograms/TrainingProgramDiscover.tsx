@@ -27,7 +27,8 @@ const TrainingProgramDiscover = async ({
         <Button
           title={t("discovermore")}
           isLink
-          path="trainingprogram"
+          not_blank
+          path="our-training-programs"
           className="btn_size w-[50%]"
         />
       </div>

@@ -52,7 +52,12 @@ const OurServciesModal: React.FC<ModalProps> = ({ data, onClose }) => {
           <p className="text-black text-[16px] w-full text-center">
             {data.description || "No description available."}
           </p>
-          <CtaButton onClick={() => data?.cta} title={t("readdetails")} />
+          <CtaButton
+            isLink
+            not_blank
+            path={`services/${data.id}`}
+            title={t("readdetails")}
+          />
         </div>
       </div>
     </div>
