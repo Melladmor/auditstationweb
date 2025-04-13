@@ -96,17 +96,11 @@ const CallBackForm = () => {
           error={errors.email?.message}
         />
         <Phone
+          name="phone"
           icon="/icons/inputicons/phone.svg"
           label={t("phonenumber")}
           required
           register={register("phone")}
-          onChange={(e) => {
-            setValue("phone", e, {
-              shouldDirty: true,
-              shouldTouch: true,
-            });
-            trigger("phone"); // 🔥 triggers validation manually
-          }}
           error={errors.phone?.message}
         />
         <TextInput
