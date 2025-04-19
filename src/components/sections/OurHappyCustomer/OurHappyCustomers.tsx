@@ -4,80 +4,13 @@ import React from "react";
 import { OurHappyCustomersI } from "./type";
 
 import { OurHappyCustomersContainer } from "./OurHappyCustomersContainer";
+import fetchPublicData from "@/lib/api/fetchPublicData";
 
 const OurHappyCustomers = async () => {
+  const happyCustomerData: OurHappyCustomersI[] = await fetchPublicData({
+    url: "happy-customer",
+  });
   const t = await getTranslations("sections.ourhappycustomers");
-
-  const ourHappyCustomersData: OurHappyCustomersI[] = [
-    {
-      id: 1,
-      title: "Company Name",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu fringilla felis.",
-      logo: "/images/company.png",
-      category: [
-        {
-          id: 1,
-          name: "Main Category",
-        },
-        {
-          id: 2,
-          name: "Subcategory",
-        },
-      ],
-    },
-    {
-      id: 2,
-      title: "Company Name",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu fringilla felis.",
-      logo: "/images/company.png",
-      category: [
-        {
-          id: 1,
-          name: "Main Category",
-        },
-        {
-          id: 2,
-          name: "Subcategory",
-        },
-      ],
-    },
-    {
-      id: 3,
-      title: "Company Name",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu fringilla felis.",
-      logo: "/images/company.png",
-      category: [
-        {
-          id: 1,
-          name: "Main Category",
-        },
-        {
-          id: 2,
-          name: "Subcategory",
-        },
-      ],
-    },
-    {
-      id: 4,
-      title: "Company Name",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu fringilla felis.",
-      logo: "/images/company.png",
-      category: [
-        {
-          id: 1,
-          name: "Main Category",
-        },
-        {
-          id: 2,
-          name: "Subcategory",
-        },
-      ],
-    },
-  ];
 
   return (
     <CustomSection
@@ -87,7 +20,7 @@ const OurHappyCustomers = async () => {
         subTitle: t("subTitle"),
       }}
       className="mt-[100px]">
-      <OurHappyCustomersContainer data={ourHappyCustomersData} />
+      <OurHappyCustomersContainer data={happyCustomerData} />
     </CustomSection>
   );
 };

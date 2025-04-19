@@ -50,4 +50,3 @@ function Statistics() {
 }
 
 export default Statistics;
-// absolute z-10 lg:bottom-[-30%] md:bottom-[-80%] xs:bottom-[-185%]

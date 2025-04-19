@@ -1,4 +1,5 @@
-import Image from "next/image";
+"use client";
+import CustomImage from "@/components/ui/CustomImage";
 import React from "react";
 
 type Props = {
@@ -8,17 +9,15 @@ type Props = {
 };
 
 const OurPlatformHead = ({ description, image, title }: Props) => {
+  const emptyImage = "/images/slide.jpg";
   return (
     <div className="flex xl:flex-nowrap lg:flex-nowrap sm:flex-wrap xs:flex-wrap gap-[24px]  items-start mb-[32px]">
       <div className="xl:h-[628px] lg:h-[628px] md:h-[450px] sm:h-[400px] xs:h-[300px] w-full relative">
         <div className="w-[90%] h-[90%] absolute ltr:right-0 rtl:left-0 top-0 bg-[#ECF8E3]"></div>
         <div className="w-[90%] h-[90%] absolute ltr:left-0 rtl:right-0 bottom-0 bg-white border border-secondary xl:rounded-[0px_200px] lg:rounded-[0px_200px] md:rounded-[0px_200px] sm:rounded-[0px_100px] xs:rounded-[0px_100px] p-[30px]">
-          <Image
-            src="/logos/auditlogoblack.svg"
-            alt="/logos/auditlogoblack.svg"
-            loading="lazy"
-            width={100}
-            height={100}
+          <CustomImage
+            url={image}
+            emptyImageUrl={emptyImage}
             className="w-full h-full"
           />
         </div>

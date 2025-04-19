@@ -5,10 +5,12 @@ import OurPlatformHead from "./OurPlatformHead";
 import { OurPlatformI } from "./type";
 import OurPlatformVideo from "./OurPlatformVideo";
 import Button from "@/components/Buttons/Button";
+// import fetchPublicData from "@/lib/api/fetchPublicData";
 
 const OurPlatform = async () => {
   const t = await getTranslations("sections.ourplatform");
   const btnTitle = await getTranslations();
+  // const ourPlatformData2 = await fetchPublicData({ url: "our_platforms" });
 
   const ourPlatformData: OurPlatformI = {
     image: "/images/slide.jpg",

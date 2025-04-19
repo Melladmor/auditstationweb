@@ -24,3 +24,21 @@ export interface RewardCardsI {
   imageClassName?: string;
   links?: SocialLinksT[];
 }
+
+
+export type OurTeamReturnedData = {
+  id: number;
+  name: string;
+  description: string;
+  facebook: string;
+  instagram: string;
+  tiktok: string;
+  youtube: string;
+  twitter: string;
+  linkedin: string;
+  whatsapp: string;
+  snapchat: string;
+  telegram: string;
+  image: string;
+  position: string;
+};

@@ -4,9 +4,9 @@ export type CategoryT = {
 };
 export interface OurHappyCustomersI {
   id: number;
-  title: string;
+  name: string;
   logo: string;
-  category?: CategoryT[];
+  category?: string;
+  sub_category?: string;
   description: string;
-  cta?: string;
 }

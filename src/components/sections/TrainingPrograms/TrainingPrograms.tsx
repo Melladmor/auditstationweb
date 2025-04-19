@@ -4,8 +4,12 @@ import React from "react";
 import TrainingProgramHead from "./TrainingProgramHead";
 import { OurPlatformI } from "../OurPlatform/type";
 import TrainingProgramDiscover from "./TrainingProgramDiscover";
+// import fetchPublicData from "@/lib/api/fetchPublicData";
 const TrainingPrograms = async () => {
   const t = await getTranslations("sections.trainingprograms");
+  // const trainingProgramData = await fetchPublicData({
+  //   url: "our_training_programs",
+  // });
   const trainingProgramHeadData: OurPlatformI = {
     image: "/images/slide.jpg",
     title: "‘’Master Your Skills with Expert Training’’",
