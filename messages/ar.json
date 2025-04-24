@@ -92,6 +92,13 @@
     "message_required": "الرسالة مطلوبة",
     "phone_invalid_length": "يجب أن يتكون رقم الهاتف من 7 أرقام على الأقل (باستثناء رمز الدولة)"
   },
+  "statistics": {
+    "inTheWorld": "في العالم",
+    "yearsOfExperience": "سنوات الخبرة",
+    "customers": "العملاء",
+    "satisfaction": "الرضا",
+    "overGcc": "أنحاء الخليج"
+  },
   "seemore": "رؤية المزيد",
   "readmore": "إقرأ المزيد",
   "readdetails": "اقرأ التفاصيل",

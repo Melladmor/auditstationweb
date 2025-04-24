@@ -91,6 +91,13 @@
     "message_required": "Message is required",
     "phone_invalid_length": "Phone number should be at least 7 digits (excluding country code)"
   },
+  "statistics": {
+    "inTheWorld": "In The World",
+    "yearsOfExperience": "Years Of Experience",
+    "customers": "Customers",
+    "satisfaction": "Satisfaction",
+    "overGcc": "Over GCC"
+  },
   "seemore": "See More",
   "readmore": "Read More",
   "readdetails": "Read Details",

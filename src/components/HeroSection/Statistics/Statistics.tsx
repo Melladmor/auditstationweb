@@ -1,37 +1,54 @@
-"use client";
 import React from "react";
 import { StatisticsI } from "./type.d";
 import StatisticsCard from "./StatisticsCard";
+import fetchPublicData from "@/lib/api/fetchPublicData";
+import { getTranslations } from "next-intl/server";
+type StatsData = {
+  number_in_world: number;
+  years_of_experience: number;
+  customers: number;
+  satisfaction: string | number;
+  over_gcc: string;
+};
 
-function Statistics() {
+const Statistics = async () => {
+  const t = await getTranslations("statistics");
+  const statsData: StatsData = await fetchPublicData({
+    url: "company_achievements",
+  });
+
   const statisticsData: StatisticsI[] = [
     {
       id: 1,
-      title: "In The World",
+      title: t("inTheWorld"),
       start: 0,
-      end: 1,
+      end: statsData?.number_in_world,
     },
     {
       id: 2,
-      title: "Years Of Experience",
+      title: t("yearsOfExperience"),
       start: 0,
-      end: 6,
+      end: statsData?.years_of_experience,
     },
     {
       id: 3,
       value: "+",
-      title: "Customers",
+      title: t("customers"),
       start: 0,
-      end: 200,
+      end: statsData?.customers,
     },
     {
       id: 4,
       value: "%",
-      title: "Satisfaction",
+      title: t("satisfaction"),
       start: 0,
-      end: 100,
+      end: Number(statsData?.satisfaction),
     },
-    { id: 5, value: "All", title: "Over Gcc" },
+    {
+      id: 5,
+      value: statsData?.over_gcc,
+      title: t("overGcc"),
+    },
   ];
 
   return (
@@ -47,6 +64,6 @@ function Statistics() {
       </div>
     </div>
   );
-}
+};
 
 export default Statistics;
