@@ -5,21 +5,20 @@ import { OurPlatformI } from "../OurPlatform/type";
 import Button from "@/components/Buttons/Button";
 import Title from "@/components/Title/Title";
 import VideoPlayer from "@/components/VideoPlayer/VideoPlayer";
+import fetchPublicData from "@/lib/api/fetchPublicData";
 const TaxStation = async () => {
   const t = await getTranslations("sections.taxStation");
   const btnTitle = await getTranslations();
-
-  const TaxStationData: Omit<OurPlatformI, "image" | "description" | "title"> =
-    {
-      vedioLink: "/videos/audit.mp4",
-    };
+  const taxStationData: Omit<OurPlatformI, "image"> = await fetchPublicData({
+    url: "tax_stations/tax",
+  });
 
   return (
     <CustomSection className="mt-[100px] py-[40px] bg-dark-bodyBg dark:bg-light-bodyBg">
       <Title
         first={t("first")}
         second={t("second")}
-        subTitle={t("subTitle")}
+        subTitle={taxStationData?.description}
         subTitleClass="text-white dark:text-black"
         firstClass="text-white dark:text-black"
       />
@@ -41,7 +40,7 @@ const TaxStation = async () => {
         </div>
         <div className="border-[4px] border-white dark:border-dark-border rounded-[20px]">
           <VideoPlayer
-            videoLink={TaxStationData?.vedioLink}
+            videoLink={taxStationData?.video}
             customClass="max-h-[433px] rounded-[14px]"
           />
         </div>
