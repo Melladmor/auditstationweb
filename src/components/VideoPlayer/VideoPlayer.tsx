@@ -36,7 +36,7 @@ const VideoPlayer = ({ videoLink, customClass }: Props) => {
   const { handleBack, handleNext } = useNextBack(videoRef);
 
   return (
-    <div>
+    <>
       {isVideoLink(videoLink) ? (
         <div className={twMerge("video_h_w relative ", customClass)}>
           <iframe
@@ -85,7 +85,7 @@ const VideoPlayer = ({ videoLink, customClass }: Props) => {
           />
         </div>
       )}
-    </div>
+    </>
   );
 };
 

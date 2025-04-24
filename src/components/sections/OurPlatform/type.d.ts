@@ -1,6 +1,7 @@
 export interface OurPlatformI {
+  id: number;
   image: string;
   title: string;
   description: string;
-  vedioLink: string;
+  video: string;
 }
