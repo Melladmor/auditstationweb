@@ -18,13 +18,12 @@ export interface RewardCardsI {
   image: string;
   title: string;
   subTitle: string;
-  discription?: string;
+  description?: string;
   className?: string;
   subClassName?: string;
   imageClassName?: string;
   links?: SocialLinksT[];
 }
-
 
 export type OurTeamReturnedData = {
   id: number;

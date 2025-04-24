@@ -35,10 +35,9 @@ const RewardsProgram = async () => {
   const ourRewardCard: RewardCardsI[] = our_rewards
     ? our_rewards?.map((el: RewardCardsT, index: number) => {
         return {
-          ...el,
+          id: index,
           subTitle: el?.description,
           title: el?.name,
-          id: index,
           image: "/images/reward.png",
         };
       })

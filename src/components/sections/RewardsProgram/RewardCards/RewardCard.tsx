@@ -11,7 +11,7 @@ const RewardCard = ({
   subTitle,
   image,
   className,
-  discription,
+  description,
   imageClassName,
   subClassName,
   links,
@@ -52,13 +52,13 @@ const RewardCard = ({
           )}>
           {subTitle}
         </p>
-        {discription && (
+        {description && (
           <p
             className={twMerge(
               "xl:text-[16px] lg:text-[16px] md:text-[14px] sm:text-[12px] xs:text-[12px]",
               subClassName
             )}>
-            {discription}
+            {description}
           </p>
         )}
         {links && links.length > 0 && (
