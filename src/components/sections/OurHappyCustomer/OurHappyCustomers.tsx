@@ -1,8 +1,6 @@
 import CustomSection from "@/components/CustomSection/CustomSection";
 import { getTranslations } from "next-intl/server";
-import React from "react";
 import { OurHappyCustomersI } from "./type";
-
 import { OurHappyCustomersContainer } from "./OurHappyCustomersContainer";
 import fetchPublicData from "@/lib/api/fetchPublicData";
 
@@ -11,7 +9,6 @@ const OurHappyCustomers = async () => {
     url: "happy-customer",
   });
   const t = await getTranslations("sections.ourhappycustomers");
-
   return (
     <CustomSection
       title={{

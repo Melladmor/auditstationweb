@@ -5,4 +5,5 @@ export interface CustomSectionI {
   title?: TitleI;
   className?: string;
   children: React.ReactNode;
+  contentClassName?: string;
 }

@@ -1,3 +1,9 @@
+import React from "react";
+
+import CallBack from "@/components/sections/CallBack/CallBack";
+import CustomerSkeleton from "@/components/sections/OurHappyCustomer/CustomerSkeleton";
+import { Suspense } from "react";
+import dynamic from "next/dynamic";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import OurHappyCustomers from "@/components/sections/OurHappyCustomer/OurHappyCustomers";
 import AboutUsSection from "@/components/sections/AboutUs/AboutUsSection";
@@ -10,17 +16,17 @@ import RewardsProgram from "@/components/sections/RewardsProgram/RewardsProgram"
 import OurTeam from "@/components/sections/OurTeam/OurTeam";
 import News from "@/components/sections/News/News";
 import GoogleReviews from "@/components/sections/GoogleReviews/GoogleReviews";
-import CallBack from "@/components/sections/CallBack/CallBack";
 
-export default async function HomePage() {
+export default function HomePage() {
   return (
-    <div>
+    <>
       <HeroSection />
       <OurHappyCustomers />
       <AboutUsSection />
       <OurServicesSection />
       <PackagesSection />
       <OurPlatform />
+
       <TrainingPrograms />
       <TaxStation />
       <RewardsProgram />
@@ -28,6 +34,6 @@ export default async function HomePage() {
       <News />
       <GoogleReviews />
       <CallBack />
-    </div>
+    </>
   );
 }

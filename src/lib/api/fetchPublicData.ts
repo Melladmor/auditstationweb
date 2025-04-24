@@ -5,15 +5,14 @@ const API_BASE_URL = process.env.API_BASE_URL;
 
 export default async function fetchPublicData({ url }: FetchPublicDataParams) {
   const locale = await getLocale();
-
+  await new Promise((r) => setTimeout(r, 10000));
   const res = await fetch(`${API_BASE_URL}/api/public/${url}`, {
-    method: "GET",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
       "Accept-Language": locale,
     },
-    next: { revalidate: 3600 },
+    next: { revalidate: 60 },
   });
 
   if (!res.ok) {
