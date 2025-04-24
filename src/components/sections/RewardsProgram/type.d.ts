@@ -1,4 +1,3 @@
-import { ProgressI } from "../Progress/type";
 import { RewardCardsI } from "./RewardCards/type";
 export type RewardTierT = {
   id: number;

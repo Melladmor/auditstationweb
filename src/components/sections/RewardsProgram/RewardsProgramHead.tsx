@@ -3,7 +3,6 @@ import { getTranslations } from "next-intl/server";
 import React from "react";
 import { RewardsProgramI, RewardTierT } from "./type";
 import Progress from "../Progress/Progress";
-import { ProgressI } from "../Progress/type";
 import { reverseArray } from "@/lib/helper/helper";
 
 type Props = {

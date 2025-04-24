@@ -1,7 +1,6 @@
 "use Client";
 import React from "react";
 import { StatisticsI } from "./type.d";
-import CountUp from "react-countup";
 import CountStats from "./CountStats";
 
 type Props = {

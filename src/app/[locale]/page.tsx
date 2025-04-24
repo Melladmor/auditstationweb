@@ -1,9 +1,5 @@
 import React from "react";
-
 import CallBack from "@/components/sections/CallBack/CallBack";
-import CustomerSkeleton from "@/components/sections/OurHappyCustomer/CustomerSkeleton";
-import { Suspense } from "react";
-import dynamic from "next/dynamic";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import OurHappyCustomers from "@/components/sections/OurHappyCustomer/OurHappyCustomers";
 import AboutUsSection from "@/components/sections/AboutUs/AboutUsSection";

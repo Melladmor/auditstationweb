@@ -10,18 +10,18 @@ const TrainingPrograms = async () => {
   // const trainingProgramData = await fetchPublicData({
   //   url: "our_training_programs",
   // });
-  const trainingProgramHeadData: OurPlatformI = {
+  const trainingProgramHeadData: Omit<OurPlatformI, "id"> = {
     image: "/images/slide.jpg",
     title: "‘’Master Your Skills with Expert Training’’",
     description:
       "Enhance your skills with our expert-led training programs designed to equip professionals with the latest knowledge in auditing, tax consultancy, and financial management. Stay ahead with practical insights and industry-best practices.",
-    vedioLink: "/videos/audit.mp4",
+    video: "/videos/audit.mp4",
   };
-  const trainingProgramDicoverData: Omit<OurPlatformI, "image"> = {
+  const trainingProgramDicoverData: Omit<OurPlatformI, "image" | "id"> = {
     title: "Discover Our Training Program , Know How It Work!",
     description:
       "Discover Our Training Program , Enhance your skills with our expert-led training  programs designed to equip professionals with the latest knowledge in auditing,",
-    vedioLink: "/videos/audit.mp4",
+    video: "/videos/audit.mp4",
   };
   return (
     <CustomSection
@@ -38,7 +38,7 @@ const TrainingPrograms = async () => {
       />
       <TrainingProgramDiscover
         title={trainingProgramDicoverData?.title}
-        videoLink={trainingProgramDicoverData?.vedioLink}
+        videoLink={trainingProgramDicoverData?.video}
         discription={trainingProgramDicoverData?.description}
       />
     </CustomSection>

@@ -12,7 +12,7 @@ type Props = NewsI;
 const NewsCard = ({
   author,
   category,
-  discription,
+  description,
   image,
   publishDate,
   readingTime,
@@ -49,9 +49,9 @@ const NewsCard = ({
         <h4 className="xl:text-[16px] lg:text-[16px] md:text-[14px] sm:text-[14px] xs:text-[12px] font-[700]">
           {title}
         </h4>
-        {discription && (
+        {description && (
           <p className="xl:text-[16px] lg:text-[16px] md:text-[14px] sm:text-[12px] xs:text-[12px]">
-            {discription?.slice(0, 84)}...
+            {description?.slice(0, 84)}...
           </p>
         )}
         <div className="flex gap-2 items-center justify-start">

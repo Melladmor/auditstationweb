@@ -1,7 +1,6 @@
 import CustomSection from "@/components/CustomSection/CustomSection";
 import { getTranslations } from "next-intl/server";
 import React from "react";
-import { GoogleReviewI } from "./type";
 import GoogleReviewsContainer from "./GoogleReviewsContainer";
 import fetchPublicData from "@/lib/api/fetchPublicData";
 

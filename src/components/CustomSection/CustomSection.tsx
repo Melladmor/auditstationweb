@@ -1,8 +1,6 @@
 import { twMerge } from "tailwind-merge";
 import { CustomSectionI } from "./type";
 import Title from "../Title/Title";
-import { Suspense } from "react";
-
 type Props = CustomSectionI;
 
 export default function CustomSection({
