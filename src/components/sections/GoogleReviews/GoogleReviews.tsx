@@ -3,27 +3,12 @@ import { getTranslations } from "next-intl/server";
 import React from "react";
 import { GoogleReviewI } from "./type";
 import GoogleReviewsContainer from "./GoogleReviewsContainer";
+import fetchPublicData from "@/lib/api/fetchPublicData";
 
 const GoogleReviews = async () => {
   const t = await getTranslations("sections.googlereviews");
-  const reviewData: GoogleReviewI[] = [
-    {
-      id: 1,
-      image: "/images/review.png",
-    },
-    {
-      id: 2,
-      image: "/images/review.png",
-    },
-    {
-      id: 3,
-      image: "/images/review.png",
-    },
-    {
-      id: 4,
-      image: "/images/review.png",
-    },
-  ];
+  const reviewData = await fetchPublicData({ url: "google_review" });
+
   return (
     <CustomSection
       title={{
