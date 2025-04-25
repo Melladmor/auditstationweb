@@ -2,6 +2,7 @@ import React from "react";
 import { twMerge } from "tailwind-merge";
 import { TitleI } from "./type";
 import TitleIcon from "./TitleIcon";
+import Image from "next/image";
 
 type Props = TitleI;
 
@@ -13,6 +14,7 @@ const Title = ({
   subTitleClass,
   firstClass,
   secondClass,
+  customTitleIcon,
 }: Props) => {
   return (
     <div
@@ -22,7 +24,17 @@ const Title = ({
         className
       )}>
       <div className="flex flex-row flex-nowrap gap-[16px] items-center">
-        <TitleIcon />
+        {customTitleIcon ? (
+          <Image
+            width={100}
+            height={100}
+            src={customTitleIcon}
+            alt={customTitleIcon}
+            className="size-[32px]"
+          />
+        ) : (
+          <TitleIcon />
+        )}
         <h1 className="xl:text-[32px] lg:text-[30px] md:text-[24px] sm:text-[20px] xs:text-[20px] font-[700] capitalize">
           <span
             className={twMerge(
