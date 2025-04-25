@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { SubServicesT } from "./type";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import Image from "next/image";
-import CtaButton from "@/components/Buttons/CtaButton";
+import CtaButton from "@/components/ui/Buttons/CtaButton";
 import { useTranslations } from "next-intl";
 
 interface ModalProps {

@@ -1,9 +1,9 @@
-import CustomSection from "@/components/CustomSection/CustomSection";
+import CustomSection from "@/components/ui/CustomSection/CustomSection";
 import { getTranslations } from "next-intl/server";
 import React from "react";
 import { PackagesI } from "./type";
 import PackagesContainer from "./PackagesContainer";
-import Collapse from "@/components/collapse/Collapse";
+import Collapse from "@/components/ui/collapse/Collapse";
 
 const PackagesSection = async () => {
   const t = await getTranslations("sections.packages");

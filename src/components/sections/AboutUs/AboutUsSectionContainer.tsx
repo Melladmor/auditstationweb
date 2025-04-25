@@ -1,5 +1,5 @@
-import Title from "@/components/Title/Title";
-import Button from "@/components/Buttons/Button";
+import Title from "@/components/ui/Title/Title";
+import Button from "@/components/ui/Buttons/Button";
 import AboutUsSectionVideo from "./AboutUsSectionVideo";
 import { getTranslations } from "next-intl/server";
 import { AboutUsSectionT } from "./type";

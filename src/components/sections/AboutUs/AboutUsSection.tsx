@@ -1,6 +1,6 @@
 import AboutUsSectionContainer from "./AboutUsSectionContainer";
 import { getTranslations } from "next-intl/server";
-import CustomSection from "@/components/CustomSection/CustomSection";
+import CustomSection from "@/components/ui/CustomSection/CustomSection";
 import fetchPublicData from "@/lib/api/fetchPublicData";
 import { AboutUsDataT } from "./type";
 

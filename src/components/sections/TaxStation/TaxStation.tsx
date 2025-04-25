@@ -1,9 +1,9 @@
-import CustomSection from "@/components/CustomSection/CustomSection";
+import CustomSection from "@/components/ui/CustomSection/CustomSection";
 import { getTranslations } from "next-intl/server";
 import React from "react";
 import { OurPlatformI } from "../OurPlatform/type";
-import Button from "@/components/Buttons/Button";
-import Title from "@/components/Title/Title";
+import Button from "@/components/ui/Buttons/Button";
+import Title from "@/components/ui/Title/Title";
 import VideoPlayer from "@/components/VideoPlayer/VideoPlayer";
 import fetchPublicData from "@/lib/api/fetchPublicData";
 const TaxStation = async () => {

@@ -1,4 +1,4 @@
-import CustomSection from "@/components/CustomSection/CustomSection";
+import CustomSection from "@/components/ui/CustomSection/CustomSection";
 import { getTranslations } from "next-intl/server";
 import React from "react";
 import RewardsProgramHead from "./RewardsProgramHead";

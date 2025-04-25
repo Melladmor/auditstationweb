@@ -2,9 +2,9 @@ import { getTranslations } from "next-intl/server";
 import React from "react";
 import { OurServicesI } from "./type";
 import OurServicesCard from "./OurServicesCard";
-import CustomSection from "@/components/CustomSection/CustomSection";
+import CustomSection from "@/components/ui/CustomSection/CustomSection";
 import Image from "next/image";
-import Button from "@/components/Buttons/Button";
+import Button from "@/components/ui/Buttons/Button";
 
 const OurServicesSection = async () => {
   const t = await getTranslations("sections.ourservices");

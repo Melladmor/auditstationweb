@@ -2,7 +2,7 @@
 import { useState, useRef, useEffect } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { twMerge } from "tailwind-merge";
-import ComparePackages from "../sections/Packages/ComparePackages/ComparePackages";
+import ComparePackages from "../../sections/Packages/ComparePackages/ComparePackages";
 type Props = {
   btnClassName?: string;
   title: string;

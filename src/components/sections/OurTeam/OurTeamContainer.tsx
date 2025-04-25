@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { RewardCardsI } from "../RewardsProgram/RewardCards/type";
-import Slider from "@/components/Slider/Slider";
+import Slider from "@/components/ui/Slider/Slider";
 import RewardCard from "../RewardsProgram/RewardCards/RewardCard";
 
 type Props = {

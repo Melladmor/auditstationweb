@@ -9,7 +9,7 @@ import { useTranslations } from "next-intl";
 import TextInput from "@/components/Inputs/Inputs/TextInput";
 import TextArea from "@/components/Inputs/Inputs/TextArea";
 import Phone from "@/components/Inputs/Inputs/Phone";
-import Button from "@/components/Buttons/Button";
+import Button from "@/components/ui/Buttons/Button";
 
 const createFormSchema = (t: ReturnType<typeof useTranslations>) => {
   return z.object({

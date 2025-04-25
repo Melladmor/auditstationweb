@@ -1,5 +1,5 @@
 "use client";
-import CustomSection from "@/components/CustomSection/CustomSection";
+import CustomSection from "@/components/ui/CustomSection/CustomSection";
 import SkeletonCard from "@/components/ui/skeleton/SkeletonCard";
 import React from "react";
 

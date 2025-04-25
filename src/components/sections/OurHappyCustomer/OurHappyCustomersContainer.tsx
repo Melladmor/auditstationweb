@@ -1,9 +1,9 @@
 "use client";
-import Slider from "@/components/Slider/Slider";
+import Slider from "@/components/ui/Slider/Slider";
 import React from "react";
 import OurHappyCustomresCard from "./OurHappyCustomresCard";
 import { OurHappyCustomersI } from "./type";
-import Button from "@/components/Buttons/Button";
+import Button from "@/components/ui/Buttons/Button";
 import { useTranslations } from "next-intl";
 
 type Props = {

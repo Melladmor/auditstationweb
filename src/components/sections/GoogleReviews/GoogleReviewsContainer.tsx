@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import Slider from "@/components/Slider/Slider";
+import Slider from "@/components/ui/Slider/Slider";
 import { GoogleReviewI } from "./type";
 import GoogleReviewCard from "./GoogleReviewCard";
-import Button from "@/components/Buttons/Button";
+import Button from "@/components/ui/Buttons/Button";
 import { useTranslations } from "next-intl";
 
 type Props = {

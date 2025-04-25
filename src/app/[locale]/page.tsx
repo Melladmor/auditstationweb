@@ -1,6 +1,6 @@
 import React from "react";
 import CallBack from "@/components/sections/CallBack/CallBack";
-import HeroSection from "@/components/HeroSection/HeroSection";
+import HeroSection from "@/components/sections/HeroSection/HeroSection";
 import OurHappyCustomers from "@/components/sections/OurHappyCustomer/OurHappyCustomers";
 import AboutUsSection from "@/components/sections/AboutUs/AboutUsSection";
 import OurServicesSection from "@/components/sections/OurServices/OurServicesSection";
@@ -22,7 +22,6 @@ export default function HomePage() {
       <OurServicesSection />
       <PackagesSection />
       <OurPlatform />
-
       <TrainingPrograms />
       <TaxStation />
       <RewardsProgram />

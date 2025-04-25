@@ -1,8 +1,8 @@
 "use client";
-import Slider from "@/components/Slider/Slider";
+import Slider from "@/components/ui/Slider/Slider";
 import React from "react";
 import { NewsI } from "./type";
-import Button from "@/components/Buttons/Button";
+import Button from "@/components/ui/Buttons/Button";
 import { useTranslations } from "next-intl";
 import NewsCard from "./NewsCard";
 

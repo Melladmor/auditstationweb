@@ -1,10 +1,10 @@
-import CustomSection from "@/components/CustomSection/CustomSection";
+import CustomSection from "@/components/ui/CustomSection/CustomSection";
 import { AboutUsDataT } from "@/components/sections/AboutUs/type";
 import TopPagesSection from "@/components/ui/TopPagesSection";
 import fetchPublicData from "@/lib/api/fetchPublicData";
 import { getTranslations } from "next-intl/server";
 import ImageComp from "./components/ImageComp";
-import Title from "@/components/Title/Title";
+import Title from "@/components/ui/Title/Title";
 import VideoPlayer from "@/components/VideoPlayer/VideoPlayer";
 
 const page = async () => {

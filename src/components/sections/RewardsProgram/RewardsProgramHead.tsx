@@ -1,4 +1,4 @@
-import Button from "@/components/Buttons/Button";
+import Button from "@/components/ui/Buttons/Button";
 import { getTranslations } from "next-intl/server";
 import React from "react";
 import { RewardsProgramI, RewardTierT } from "./type";

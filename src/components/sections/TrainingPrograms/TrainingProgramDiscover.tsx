@@ -1,4 +1,4 @@
-import Button from "@/components/Buttons/Button";
+import Button from "@/components/ui/Buttons/Button";
 import VideoPlayer from "@/components/VideoPlayer/VideoPlayer";
 import { getTranslations } from "next-intl/server";
 import React from "react";

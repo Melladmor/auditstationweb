@@ -1,6 +1,6 @@
 import React from "react";
 import { FeatureT, PackagesI } from "./type";
-import Button from "@/components/Buttons/Button";
+import Button from "@/components/ui/Buttons/Button";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { useTranslations } from "next-intl";
 
