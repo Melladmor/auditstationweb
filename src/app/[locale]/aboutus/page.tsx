@@ -6,6 +6,8 @@ import { getTranslations } from "next-intl/server";
 import ImageComp from "./components/ImageComp";
 import Title from "@/components/ui/Title/Title";
 import VideoPlayer from "@/components/VideoPlayer/VideoPlayer";
+import Button from "@/components/ui/Buttons/Button";
+import { TbBrandWhatsappFilled } from "react-icons/tb";
 
 const page = async () => {
   const aboutUsData: AboutUsDataT = await fetchPublicData({ url: "about_us" });
@@ -75,6 +77,15 @@ const page = async () => {
                 customClass="xl:!h-[472px] lg:!h-[472px]  md:!h-[400px] sm:!h-[350px] xs:!h-[350px]   !rounded-[16px]"
               />
             </div>
+          </div>
+          <div className="flex justify-end">
+            <Button
+              title={t("contactwhatsapp")}
+              icon={<TbBrandWhatsappFilled className="size-[24px]" />}
+              isLink
+              path="https://wa.me/971501234567"
+              className="btn_size bg-secondary dark:bg-secondary hover:bg-black dark:hover:bg-white text-dark-text dark:text-dark-text dark:hover:text-black"
+            />
           </div>
         </div>
       </CustomSection>
