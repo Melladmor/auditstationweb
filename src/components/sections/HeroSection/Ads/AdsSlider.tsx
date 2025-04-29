@@ -30,7 +30,7 @@ const AdsSlider = ({ data }: Props) => {
         onSlideChange={handleSlideChange}
         className="w-full xl:h-[478px] lg:h-[478px] md:h-[450px] sm:h-[300px] xs:h-[300px]">
         {data?.map((slide: SlideI) => (
-          <SwiperSlide key={slide.id} className="w-full h-full">
+          <SwiperSlide key={slide.id} className="w-full h-full !p-0">
             <AdsSlide {...slide} />
           </SwiperSlide>
         ))}
